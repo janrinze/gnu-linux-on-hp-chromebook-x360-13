@@ -1,0 +1,1 @@
+console=tty1 verbose root=/dev/sda3 rootwait rw rootfstype=ext4 net.ifnames=0 biosdevname=0 noinitrd irqchip.gicv3_pseudo_nmi=1
