@@ -1,0 +1,43 @@
+Module                  Size  Used by
+mt7921e                16384  0
+mt7921_common          69632  1 mt7921e
+mt792x_lib             57344  2 mt7921e,mt7921_common
+mt76_connac_lib        81920  3 mt792x_lib,mt7921e,mt7921_common
+mt76                  118784  4 mt792x_lib,mt7921e,mt7921_common,mt76_connac_lib
+mac80211              958464  4 mt792x_lib,mt76,mt7921_common,mt76_connac_lib
+btusb                  73728  0
+btintel                53248  1 btusb
+btmtk                  12288  1 btusb
+btrtl                  32768  1 btusb
+snd_sof_ipc_msg_injector    16384  0
+btbcm                  24576  1 btusb
+snd_sof_ipc_flood_test    16384  0
+r8153_ecm              12288  0
+bluetooth             798720  6 btrtl,btmtk,btintel,btbcm,btusb
+snd_sof_mt8195         24576  0
+cdc_ether              20480  1 r8153_ecm
+cfg80211              999424  4 mt76,mac80211,mt7921_common,mt76_connac_lib
+usbnet                 57344  2 r8153_ecm,cdc_ether
+mtk_adsp_common        12288  1 snd_sof_mt8195
+snd_sof_xtensa_dsp     12288  1 snd_sof_mt8195
+snd_sof_of             12288  1 snd_sof_mt8195
+uvcvideo              114688  0
+snd_sof               225280  5 snd_sof_ipc_flood_test,snd_sof_ipc_msg_injector,mtk_adsp_common,snd_sof_of,snd_sof_mt8195
+ecdh_generic           16384  1 bluetooth
+r8152                 110592  1 r8153_ecm
+ecc                    36864  1 ecdh_generic
+uvc                    12288  1 uvcvideo
+rfkill                 45056  3 bluetooth,cfg80211
+crct10dif_ce           12288  1
+videobuf2_vmalloc      16384  1 uvcvideo
+cros_ec_lid_angle      12288  0
+cros_usbpd_logger      16384  0
+snd_sof_utils          16384  1 snd_sof
+cros_ec_sensors        12288  0
+cros_ec_sensors_core    20480  2 cros_ec_sensors,cros_ec_lid_angle
+loop                   36864  0
+fuse                  147456  5
+dm_mod                151552  0
+ip_tables              32768  0
+x_tables               57344  1 ip_tables
+ipv6                  598016  60
