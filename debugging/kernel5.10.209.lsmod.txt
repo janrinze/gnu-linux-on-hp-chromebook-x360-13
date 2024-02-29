@@ -1,0 +1,65 @@
+Module                  Size  Used by
+snd_pcm_oss            53248  0
+snd_mixer_oss          28672  1 snd_pcm_oss
+mt7921e                32768  0
+mt7921_common          65536  1 mt7921e
+mt76_connac_lib        32768  2 mt7921e,mt7921_common
+mt76                   73728  3 mt7921e,mt7921_common,mt76_connac_lib
+btusb                  61440  0
+btbcm                  24576  1 btusb
+btintel                40960  1 btusb
+mtk_vcodec_dec_hw      20480  0
+mac80211              729088  3 mt76,mt7921_common,mt76_connac_lib
+btmtk                  16384  1 btusb
+cros_ec_lid_angle      16384  0
+mtk_vcodec_dec        106496  1 mtk_vcodec_dec_hw
+btrtl                  32768  1 btusb
+cros_ec_sensors        16384  0
+cros_ec_sensors_core    20480  2 cros_ec_sensors,cros_ec_lid_angle
+industrialio_triggered_buffer    16384  2 cros_ec_lid_angle,cros_ec_sensors_core
+mtk_vcodec_enc         40960  0
+kfifo_buf              16384  2 industrialio_triggered_buffer,cros_ec_sensors_core
+v4l2_vp9               24576  1 mtk_vcodec_dec
+bluetooth             561152  30 btrtl,btmtk,btintel,btbcm,btusb
+v4l2_h264              16384  1 mtk_vcodec_dec
+mtk_vcodec_dbgfs       16384  2 mtk_vcodec_enc,mtk_vcodec_dec
+cros_ec_typec          24576  0
+mtk_vcodec_common      16384  4 mtk_vcodec_enc,mtk_vcodec_dbgfs,mtk_vcodec_dec,mtk_vcodec_dec_hw
+cros_ec_rpmsg          16384  0
+ecdh_generic           16384  1 bluetooth
+mtk_vpu                20480  1 mtk_vcodec_common
+ecc                    28672  1 ecdh_generic
+cfg80211              630784  4 mt76,mac80211,mt7921_common,mt76_connac_lib
+cros_ec_sensorhub      28672  1 cros_ec_sensors_core
+uvcvideo              110592  0
+typec                  49152  1 cros_ec_typec
+joydev                 24576  0
+mtk_mdp3               98304  0
+snd_soc_rt5682s        73728  0
+snd_soc_max98390       24576  0
+videobuf2_vmalloc      20480  1 uvcvideo
+videobuf2_dma_contig    24576  3 mtk_vcodec_enc,mtk_mdp3,mtk_vcodec_dec
+videobuf2_memops       20480  2 videobuf2_vmalloc,videobuf2_dma_contig
+v4l2_mem2mem           28672  3 mtk_vcodec_enc,mtk_mdp3,mtk_vcodec_dec
+videobuf2_v4l2         24576  5 mtk_vcodec_enc,mtk_mdp3,uvcvideo,mtk_vcodec_dec,v4l2_mem2mem
+videobuf2_common       49152  6 mtk_vcodec_enc,mtk_mdp3,videobuf2_v4l2,uvcvideo,mtk_vcodec_dec,v4l2_mem2mem
+mtk_scp                20480  2 mtk_vcodec_common,mtk_mdp3
+mtk_rpmsg              20480  1 mtk_scp
+rpmsg_core             16384  2 mtk_rpmsg,cros_ec_rpmsg
+snd_soc_mt8195_afe    253952  38
+mtk_scp_ipi            16384  3 mtk_vcodec_common,mtk_scp,mtk_mdp3
+snd_soc_mtk_common     20480  1 snd_soc_mt8195_afe
+r8153_ecm              16384  0
+cdc_ether              20480  1 r8153_ecm
+usbnet                 32768  2 r8153_ecm,cdc_ether
+snd_sof_mt8195         20480  0
+mtk_adsp_common        16384  1 snd_sof_mt8195
+adsp_pcm               16384  1 snd_sof_mt8195
+snd_sof_xtensa_dsp     16384  1 snd_sof_mt8195
+snd_sof_of             16384  1 snd_sof_mt8195
+snd_sof                94208  3 mtk_adsp_common,snd_sof_of,snd_sof_mt8195
+snd_soc_dmic           16384  0
+snd_sof_utils          16384  1 snd_sof
+r8152                  90112  1 r8153_ecm
+mii                    16384  2 usbnet,r8152
+fuse                  114688  5
