@@ -1,0 +1,1150 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] Linux version 6.8.0-rc6-next-20240228trimmed+ (janrinze@debian) (gcc (Debian 12.2.0-14) 12.2.0, GNU ld (GNU Binutils for Debian) 2.40) #9 SMP PREEMPT_DYNAMIC Thu Feb 29 21:43:51 CET 2024
+[    0.000000] KASLR enabled
+[    0.000000] random: crng init done
+[    0.000000] Machine model: HP Dojo (sku 1, 3, 5, 7) board
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000050000000, size 41 MiB
+[    0.000000] OF: reserved mem: initialized node memory@50000000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000050000000..0x00000000528fffff (41984 KiB) nomap non-reusable memory@50000000
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000060000000, size 13 MiB
+[    0.000000] OF: reserved mem: initialized node memory@60000000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000060000000..0x0000000060d7ffff (13824 KiB) nomap non-reusable memory@60000000
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000060d80000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node memory@60d80000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000060d80000..0x0000000060e7ffff (1024 KiB) nomap non-reusable memory@60d80000
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000060e80000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node memory@60e80000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000060e80000..0x00000000610fffff (2560 KiB) nomap non-reusable memory@60e80000
+[    0.000000] OF: reserved mem: 0x00000000ffec5000..0x00000000fffc4fff (1024 KiB) map non-reusable ramoops
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x000000023fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x23ef90340-0x23ef92fff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000004fffffff]
+[    0.000000]   node   0: [mem 0x0000000050000000-0x00000000528fffff]
+[    0.000000]   node   0: [mem 0x0000000052900000-0x00000000545fffff]
+[    0.000000]   node   0: [mem 0x0000000054700000-0x000000005fffffff]
+[    0.000000]   node   0: [mem 0x0000000060000000-0x00000000610fffff]
+[    0.000000]   node   0: [mem 0x0000000061100000-0x0000000069ffffff]
+[    0.000000]   node   0: [mem 0x000000006a100000-0x00000000ffdfffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000023fffffff]
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 512 pages in unavailable ranges
+[    0.000000] cma: Reserved 32 MiB at 0x00000000fde00000 on node -1
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] percpu: Embedded 33 pages/cpu s96296 r8192 d30680 u135168
+[    0.000000] pcpu-alloc: s96296 r8192 d30680 u135168 alloc=33*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: Pseudo-NMI disabled due to MediaTek Chromebook GICR save problem
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: detected: Virtualization Host Extensions
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: cros_secure console=tty1 verbose root=/dev/nvme0n1p1 rootwait rw rootfstype=ext4 net.ifnames=0 biosdevname=0 noinitrd irqchip.gicv3_pseudo_nmi=1 
+[    0.000000] Unknown kernel command line parameters "cros_secure verbose biosdevname=0", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 2063360
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f9e00000-0x00000000fde00000] (64MB)
+[    0.000000] Memory: 8019780K/8384512K available (19904K kernel code, 4630K rwdata, 10016K rodata, 9344K init, 715K bss, 331964K reserved, 32768K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 63288 entries in 248 pages
+[    0.000000] ftrace: allocated 248 pages with 5 groups
+[    0.000000] trace event string verifier disabled
+[    0.000000] Dynamic Preempt: full
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU priority boosting: priority 1 delay 500 ms.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1.
+[    0.000000] RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1.
+[    0.000000] RCU Tasks Trace: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: 864 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x000000000c040000
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] /cpus/cpu@200[2] /cpus/cpu@300[3] }
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@400[4] /cpus/cpu@500[5] /cpus/cpu@600[6] /cpus/cpu@700[7] }
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 13.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+[    0.000000] sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+[    0.000559] Console: colour dummy device 80x25
+[    0.000567] printk: legacy console [tty1] enabled
+[    0.001142] Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=13000)
+[    0.001158] pid_max: default: 32768 minimum: 301
+[    0.001241] LSM: initializing lsm=capability,landlock,yama,loadpin,safesetid,selinux
+[    0.001296] landlock: Up and running.
+[    0.001302] Yama: becoming mindful.
+[    0.001316] LoadPin: ready to pin (currently not enforcing)
+[    0.001329] SELinux:  Initializing.
+[    0.001428] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.001449] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.002937] rcu: Hierarchical SRCU implementation.
+[    0.002949] rcu: 	Max phase no-delay instances is 400.
+[    0.004336] smp: Bringing up secondary CPUs ...
+[    0.004701] Detected VIPT I-cache on CPU1
+[    0.004749] GICv3: CPU1: found redistributor 100 region 0:0x000000000c060000
+[    0.004775] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    0.005420] Detected VIPT I-cache on CPU2
+[    0.005452] GICv3: CPU2: found redistributor 200 region 0:0x000000000c080000
+[    0.005468] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    0.006081] Detected VIPT I-cache on CPU3
+[    0.006110] GICv3: CPU3: found redistributor 300 region 0:0x000000000c0a0000
+[    0.006125] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    0.006819] CPU features: detected: Spectre-v4
+[    0.006825] CPU features: detected: Spectre-BHB
+[    0.006829] Detected PIPT I-cache on CPU4
+[    0.006860] GICv3: CPU4: found redistributor 400 region 0:0x000000000c0c0000
+[    0.006876] CPU4: Booted secondary processor 0x0000000400 [0x411fd410]
+[    0.007607] Detected PIPT I-cache on CPU5
+[    0.007644] GICv3: CPU5: found redistributor 500 region 0:0x000000000c0e0000
+[    0.007660] CPU5: Booted secondary processor 0x0000000500 [0x411fd410]
+[    0.008339] Detected PIPT I-cache on CPU6
+[    0.008376] GICv3: CPU6: found redistributor 600 region 0:0x000000000c100000
+[    0.008391] CPU6: Booted secondary processor 0x0000000600 [0x411fd410]
+[    0.009044] Detected PIPT I-cache on CPU7
+[    0.009081] GICv3: CPU7: found redistributor 700 region 0:0x000000000c120000
+[    0.009097] CPU7: Booted secondary processor 0x0000000700 [0x411fd410]
+[    0.009167] smp: Brought up 1 node, 8 CPUs
+[    0.009385] SMP: Total of 8 processors activated.
+[    0.009398] CPU: All CPU(s) started at EL2
+[    0.009410] CPU features: detected: 32-bit EL0 Support
+[    0.009422] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.009440] CPU features: detected: Common not Private translations
+[    0.009454] CPU features: detected: CRC32 instructions
+[    0.009471] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.009484] CPU features: detected: LSE atomic instructions
+[    0.009497] CPU features: detected: Privileged Access Never
+[    0.009509] CPU features: detected: RAS Extension Support
+[    0.009524] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.009588] alternatives: applying system-wide alternatives
+[    0.013507] CPU features: detected: Hardware dirty bit management on CPU4-7
+[    0.016085] devtmpfs: initialized
+[    0.022409] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.022426] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.022882] pinctrl core: initialized pinctrl subsystem
+[    0.023210] regulator-dummy: no parameters, enabled
+[    0.023581] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.024101] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.024210] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.024316] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.024338] audit: initializing netlink subsys (disabled)
+[    0.024428] audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
+[    0.024769] thermal_sys: Registered thermal governor 'step_wise'
+[    0.024773] thermal_sys: Registered thermal governor 'user_space'
+[    0.024780] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.024806] cpuidle: using governor ladder
+[    0.024819] cpuidle: using governor menu
+[    0.024914] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.025006] ASID allocator initialised with 32768 entries
+[    0.025329] Serial: AMBA PL011 UART driver
+[    0.025916] pstore: Using crash dump compression: deflate
+[    0.025925] printk: legacy console [ramoops-1] enabled
+[    0.026293] pstore: Registered ramoops as persistent store backend
+[    0.026300] ramoops: using 0x100000@0xffec5000, ecc: 0
+[    0.031100] platform 10005000.pinctrl: Fixed dependency cycle(s) with /soc/pinctrl@10005000/pio-default-pins
+[    0.031650] mt8195-pinctrl 10005000.pinctrl: Not support rsel value 1 Ohm for pin = 34 (GPIO34)
+[    0.031671] mt8195-pinctrl 10005000.pinctrl: Not support rsel value 1 Ohm for pin = 35 (GPIO35)
+[    0.054353] Modules: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.054369] Modules: 0 pages in range for non-PLT usage
+[    0.054371] Modules: 513072 pages in range for PLT usage
+[    0.054772] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.054795] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.054803] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.054809] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.054815] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.054821] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.054827] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.054832] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.055078] Demotion targets for Node 0: null
+[    0.055325] cryptd: max_cpu_qlen set to 1000
+[    0.056669] ppvar_sys: no parameters, enabled
+[    0.056722] usb-vbus: 5000 mV, enabled
+[    0.056759] reg-fixed-voltage regulator-ppvar-sys: ppvar_sys supplying 0uV
+[    0.056820] reg-fixed-voltage regulator-5v0-usb-vbus: usb-vbus supplying 5000000uV
+[    0.056906] iommu: Default domain type: Translated
+[    0.056916] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.058724] SCSI subsystem initialized
+[    0.058819] usbcore: registered new interface driver usbfs
+[    0.058837] usbcore: registered new interface driver hub
+[    0.058855] usbcore: registered new device driver usb
+[    0.059082] mc: Linux media interface: v0.10
+[    0.059109] videodev: Linux video capture interface: v2.00
+[    0.059126] pps_core: LinuxPPS API ver. 1 registered
+[    0.059131] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.059142] PTP clock support registered
+[    0.059157] EDAC MC: Ver: 3.0.0
+[    0.059399] scmi_core: SCMI protocol bus registered
+[    0.060587] Advanced Linux Sound Architecture Driver Initialized.
+[    0.060915] NetLabel: Initializing
+[    0.060923] NetLabel:  domain hash size = 128
+[    0.060928] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.060955] NetLabel:  unlabeled traffic allowed by default
+[    0.061042] vgaarb: loaded
+[    0.061190] clocksource: Switched to clocksource arch_sys_counter
+[    0.061406] VFS: Disk quotas dquot_6.6.0
+[    0.061432] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.064989] NET: Registered PF_INET protocol family
+[    0.065102] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.068238] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.068268] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.068305] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.068418] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.068941] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.069058] MPTCP token hash table entries: 8192 (order: 5, 196608 bytes, linear)
+[    0.069103] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.069136] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.069258] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.069512] RPC: Registered named UNIX socket transport module.
+[    0.069521] RPC: Registered udp transport module.
+[    0.069527] RPC: Registered tcp transport module.
+[    0.069532] RPC: Registered tcp-with-tls transport module.
+[    0.069537] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.069549] PCI: CLS 0 bytes, default 64
+[    0.070917] kvm [1]: nv: 477 coarse grained trap handlers
+[    0.071052] kvm [1]: IPA Size Limit: 40 bits
+[    0.071071] kvm [1]: GICv3: no GICV resource entry
+[    0.071077] kvm [1]: disabling GICv2 emulation
+[    0.071094] kvm [1]: GIC system register CPU interface enabled
+[    0.071110] kvm [1]: vgic interrupt IRQ18
+[    0.071134] kvm [1]: VHE mode initialized successfully
+[    0.071912] Initialise system trusted keyrings
+[    0.072030] workingset: timestamp_bits=42 max_order=21 bucket_order=0
+[    0.072341] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.072625] NFS: Registering the id_resolver key type
+[    0.072642] Key type id_resolver registered
+[    0.072648] Key type id_legacy registered
+[    0.072662] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.072669] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.072684] ntfs3: Max link count 4000
+[    0.072690] ntfs3: Read-only LZX/Xpress compression included
+[    0.095401] Key type asymmetric registered
+[    0.095411] Asymmetric key parser 'x509' registered
+[    0.095417] Asymmetric key parser 'pkcs8' registered
+[    0.095452] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    0.095556] io scheduler mq-deadline registered
+[    0.095571] io scheduler kyber registered
+[    0.096779] phy phy-soc:t-phy@11c40000.0: Looking up phy-supply from device tree
+[    0.096787] phy phy-soc:t-phy@11c40000.0: Looking up phy-supply property in node /soc/t-phy@11c40000/usb-phy@0 failed
+[    0.096933] phy phy-soc:t-phy@11c50000.0: Looking up phy-supply from device tree
+[    0.096938] phy phy-soc:t-phy@11c50000.0: Looking up phy-supply property in node /soc/t-phy@11c50000/usb-phy@0 failed
+[    0.097059] phy phy-soc:t-phy@11e40000.0: Looking up phy-supply from device tree
+[    0.097063] phy phy-soc:t-phy@11e40000.0: Looking up phy-supply property in node /soc/t-phy@11e40000/usb-phy@0 failed
+[    0.109637] cannot find "mediatek,mt8195-fhctl"
+[    0.121619] mtk-mmsys 14000000.syscon: error -2 can't parse gce-client-reg property (0)
+[    0.122763] mtk-mmsys 14f00000.syscon: error -2 can't parse gce-client-reg property (0)
+[    0.125274] mtk-socinfo mtk-socinfo.0.auto: MediaTek Kompanio 1200 (MT8195) SoC detected.
+[    0.126422] mtk-power-controller 10006000.syscon:power-controller: Looking up domain-supply from device tree
+[    0.130294] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.151592] 11001100.serial: ttyS0 at MMIO 0x11001100 (irq = 253, base_baud = 1625000) is a ST16650V2
+[    0.152496] msm_serial: driver initialized
+[    0.152718] SPI driver tpm_tis_spi has no spi_device_id for atmel,attpm20p
+[    0.154269] [drm] Initialized vgem 1.0.0 20120112 for vgem on minor 0
+[    0.163214] loop: module loaded
+[    0.163441] zram: Added device: zram0
+[    0.164288] vs1: 800 <--> 2200 mV at 2000 mV, enabled
+[    0.164423] mtk-pmic-keys: Failed to locate of_node [id: -1]
+[    0.164778] vgpu11: 400 <--> 1193 mV at 750 mV fast normal idle, enabled
+[    0.164942] vmodem: 400 <--> 1100 mV at 900 mV, disabled
+[    0.165095] megasas: 07.727.03.00-rc1
+[    0.165411] vpu: 400 <--> 1193 mV at 750 mV fast normal idle, enabled
+[    0.165525] vcore: override min_uV, 400000 -> 506250
+[    0.165886] vcore: 506 <--> 1300 mV at 1000 mV fast normal idle, enabled
+[    0.166052] vs2: 800 <--> 1600 mV at 1400 mV, enabled
+[    0.166190] vpa: 500 <--> 3650 mV at 500 mV, disabled
+[    0.166335] vproc2: 400 <--> 1193 mV at 750 mV fast normal idle, enabled
+[    0.166499] vproc1: 400 <--> 1193 mV at 750 mV fast normal idle, enabled
+[    0.166724] vgpu11_sshub: Bringing 400000uV into 550000-550000uV
+[    0.166845] vgpu11_sshub: 550 mV, enabled
+[    0.166961] vaud18: 1800 mV, enabled
+[    0.167081] vsim1: 1700 <--> 3100 mV at 1800 mV, disabled
+[    0.167223] vibr: 1200 <--> 3300 mV at 2800 mV, disabled
+[    0.167430] mtk-spi-nor 1132c000.spi: spi frequency: 52000000 Hz
+[    0.167983] vrf12: 1100 <--> 1300 mV at 1200 mV, enabled
+[    0.168277] Vgpu: 625 <--> 1193 mV at 750 mV fast normal idle, enabled
+[    0.168413] vbuck2: at 750 mV, disabled
+[    0.168561] vbuck3: at 800 mV, enabled
+[    0.168631] Vbcpu: 300 <--> 1193 mV at 743 mV fast normal idle, enabled
+[    0.168725] vbuck4: at 750 mV, enabled
+[    0.168811] vbuck2: at 743 mV, disabled
+[    0.168944] vbuck3: at 743 mV, disabled
+[    0.169066] vbuck4: at 743 mV, disabled
+[    0.169274] vusb: 3000 mV, enabled
+[    0.169305] tun: Universal TUN/TAP device driver, 1.6
+[    0.169786] vsram_proc2: 500 <--> 1293 mV at 850 mV, enabled
+[    0.169886] thunder_xcv, ver 1.0
+[    0.169908] thunder_bgx, ver 1.0
+[    0.169924] nicpf, ver 1.0
+[    0.170332] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version
+[    0.170341] hns3: Copyright (c) 2017 Huawei Corporation.
+[    0.170363] hclge is initializing
+[    0.170380] e1000: Intel(R) PRO/1000 Network Driver
+[    0.170386] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.170402] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.170407] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.170421] igb: Intel(R) Gigabit Ethernet Network Driver
+[    0.170427] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.170440] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+[    0.170446] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    0.170551] sky2: driver version 1.30
+[    0.170725] PPP generic driver version 2.4.2
+[    0.170850] PPP MPPE Compression module registered
+[    0.171019] VFIO - User Level meta-driver version: 0.3
+[    0.171039] vio18: 1700 <--> 1900 mV at 1800 mV, enabled
+[    0.171189] vcamio: 1700 <--> 1900 mV at 1800 mV, disabled
+[    0.171346] vcn18: 1800 mV, disabled
+[    0.171466] vfe28: 2800 mV, disabled
+[    0.171765] vcn13: 900 <--> 1300 mV at 1300 mV, disabled
+[    0.171957] vcn33_1_bt: 2800 <--> 3500 mV at 3500 mV, disabled
+[    0.172125] vcn33_1_wifi: 2800 <--> 3500 mV at 3500 mV, disabled
+[    0.172620] vaux18: 1800 mV, enabled
+[    0.172776] vsram_others: 750 mV, enabled
+[    0.172853] usbcore: registered new interface driver cdc_acm
+[    0.172861] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.172929] vefuse: 1700 <--> 2000 mV at 1800 mV, disabled
+[    0.172965] usbcore: registered new interface driver uas
+[    0.172986] usbcore: registered new interface driver usb-storage
+[    0.173118] usbcore: registered new device driver onboard-usb-hub
+[    0.173705] vxo22: 1800 <--> 2200 mV at 2200 mV, enabled
+[    0.173866] vrfck: 1240 <--> 1600 mV at 1600 mV, disabled
+[    0.174021] vbif28: 2800 mV, disabled
+[    0.176009] mt6397-rtc mt6359-rtc: registered as rtc0
+[    0.176166] mt6397-rtc mt6359-rtc: setting system clock to 2024-02-29T20:53:32 UTC (1709240012)
+[    0.176266] i2c_dev: i2c /dev entries driver
+[    0.176270] vio28: 2800 <--> 3300 mV at 2800 mV, enabled
+[    0.176521] vemc: 2500 <--> 3300 mV at 3300 mV, enabled
+[    0.176521] i2c-mt65xx 11d00000.i2c: Looking up vbus-supply from device tree
+[    0.176527] i2c-mt65xx 11d00000.i2c: Looking up vbus-supply property in node /soc/i2c@11d00000 failed
+[    0.176698] vcn33_2_bt: 2800 <--> 3500 mV at 3500 mV, disabled
+[    0.176871] vcn33_2_wifi: 2800 <--> 3500 mV at 3500 mV, disabled
+[    0.176904] i2c-mt65xx 11d02000.i2c: Looking up vbus-supply from device tree
+[    0.176912] i2c-mt65xx 11d02000.i2c: Looking up vbus-supply property in node /soc/i2c@11d02000 failed
+[    0.177844] i2c-mt65xx 11e00000.i2c: Looking up vbus-supply from device tree
+[    0.177850] i2c-mt65xx 11e00000.i2c: Looking up vbus-supply property in node /soc/i2c@11e00000 failed
+[    0.178100] va12: 1200 <--> 1300 mV at 1200 mV, enabled
+[    0.178170] i2c-mt65xx 11e01000.i2c: Looking up vbus-supply from device tree
+[    0.178178] i2c-mt65xx 11e01000.i2c: Looking up vbus-supply property in node /soc/i2c@11e01000 failed
+[    0.178258] va09: 800 <--> 1200 mV at 800 mV, enabled
+[    0.178408] vrf18: 1700 <--> 1810 mV at 1800 mV, disabled
+[    0.178593] vsram_md: 500 <--> 1293 mV at 750 mV, enabled
+[    0.178647] i2c-mt65xx 11e02000.i2c: Looking up vbus-supply from device tree
+[    0.178655] i2c-mt65xx 11e02000.i2c: Looking up vbus-supply property in node /soc/i2c@11e02000 failed
+[    0.179415] i2c-mt65xx 11e03000.i2c: Looking up vbus-supply from device tree
+[    0.179421] i2c-mt65xx 11e03000.i2c: Looking up vbus-supply property in node /soc/i2c@11e03000 failed
+[    0.180543] cr50_i2c 3-0050: cr50 TPM 2.0 (i2c 0x50 irq 115 id 0x28)
+[    0.180805] vufs: 1700 <--> 1900 mV at 1800 mV, enabled
+[    0.182997] vm18: 1700 <--> 1900 mV at 1800 mV, enabled
+[    0.183146] vbbck: 1100 <--> 1200 mV at 1200 mV, disabled
+[    0.183662] vsram_proc1: 500 <--> 1293 mV at 1000 mV, enabled
+[    0.183812] vsim2: 1700 <--> 3100 mV at 1800 mV, disabled
+[    0.183962] vsram_others_sshub: 500 <--> 1293 mV at 500 mV, disabled
+[    0.257568] i2c-mt65xx 11e04000.i2c: Looking up vbus-supply from device tree
+[    0.257575] i2c-mt65xx 11e04000.i2c: Looking up vbus-supply property in node /soc/i2c@11e04000 failed
+[    0.272429] mtk-wdt 10007000.watchdog: Watchdog enabled (timeout=31 sec, nowayout=0)
+[    0.272922] cpu cpu0: Looking up cpu-supply from device tree
+[    0.272929] cpu cpu0: Looking up cpu-supply property in node /cpus/cpu@0 failed
+[    0.272946] cpu cpu0: supply cpu not found, using dummy regulator
+[    0.273010] cpu cpu1: Looking up cpu-supply from device tree
+[    0.273015] cpu cpu1: Looking up cpu-supply property in node /cpus/cpu@100 failed
+[    0.273026] cpu cpu1: supply cpu not found, using dummy regulator
+[    0.273075] cpu cpu2: Looking up cpu-supply from device tree
+[    0.273080] cpu cpu2: Looking up cpu-supply property in node /cpus/cpu@200 failed
+[    0.273090] cpu cpu2: supply cpu not found, using dummy regulator
+[    0.273133] cpu cpu3: Looking up cpu-supply from device tree
+[    0.273137] cpu cpu3: Looking up cpu-supply property in node /cpus/cpu@300 failed
+[    0.273147] cpu cpu3: supply cpu not found, using dummy regulator
+[    0.273201] cpu cpu4: Looking up cpu-supply from device tree
+[    0.273205] cpu cpu4: Looking up cpu-supply property in node /cpus/cpu@400 failed
+[    0.273215] cpu cpu4: supply cpu not found, using dummy regulator
+[    0.273272] cpu cpu5: Looking up cpu-supply from device tree
+[    0.273276] cpu cpu5: Looking up cpu-supply property in node /cpus/cpu@500 failed
+[    0.273286] cpu cpu5: supply cpu not found, using dummy regulator
+[    0.273326] cpu cpu6: Looking up cpu-supply from device tree
+[    0.273330] cpu cpu6: Looking up cpu-supply property in node /cpus/cpu@600 failed
+[    0.273340] cpu cpu6: supply cpu not found, using dummy regulator
+[    0.273383] cpu cpu7: Looking up cpu-supply from device tree
+[    0.273388] cpu cpu7: Looking up cpu-supply property in node /cpus/cpu@700 failed
+[    0.273397] cpu cpu7: supply cpu not found, using dummy regulator
+[    0.276513] cpu cpu0: EM: OPP:500000 is inefficient
+[    0.276634] cpu cpu0: EM: created perf domain
+[    0.276638] energy_model: Accessing cpu4 policy failed
+[    0.277301] cpu cpu4: EM: created perf domain
+[    0.277305] energy_model: updating cpu0 cpu_cap=236 old capacity=308
+[    0.277308] cpu cpu0: EM: OPP:500000 is inefficient
+[    0.278155] sdhci: Secure Digital Host Controller Interface driver
+[    0.278160] sdhci: Copyright(c) Pierre Ossman
+[    0.278399] Synopsys Designware Multimedia Card Interface Driver
+[    0.278605] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.278624] mtk-msdc 11230000.mmc: Looking up vmmc-supply from device tree
+[    0.278667] mtk-msdc 11230000.mmc: Looking up vqmmc-supply from device tree
+[    0.279536] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.280064] SMCCC: SOC_ID: ID = jep106:0426:8195 Revision = 0x00000000
+[    0.280079] hid: raw HID events driver (C) Jiri Kosina
+[    0.280344] usbcore: registered new interface driver usbhid
+[    0.280354] usbhid: USB HID core driver
+[    0.280615] spi_master spi0: will run message pump with realtime priority
+[    0.281045] mtk-scp 10500000.scp: assigned reserved memory node memory@50000000
+[    0.281890] remoteproc remoteproc0: scp is available
+[    0.282216] remoteproc remoteproc0: powering up scp
+[    0.282492] remoteproc remoteproc0: Booting fw image mediatek/mt8195/scp.img, size 429920
+[    0.282497] mtk-scp 10500000.scp: IPI buf addr 0x000bfdb0
+[    0.285439] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+[    0.286825] hw perfevents: enabled with armv8_cortex_a78 PMU driver, 7 counters available
+[    0.287030] watchdog: Delayed init of the lockup detector failed: -19
+[    0.287035] watchdog: Hard watchdog permanently disabled
+[    0.288417] xt_time: kernel timezone is -0000
+[    0.288469] Initializing XFRM netlink socket
+[    0.288496] NET: Registered PF_PACKET protocol family
+[    0.288502] NET: Registered PF_KEY protocol family
+[    0.288710] Key type dns_resolver registered
+[    0.290976] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.291549] registered taskstats version 1
+[    0.292051] Loading compiled-in X.509 certificates
+[    0.294408] Key type .fscrypt registered
+[    0.294414] Key type fscrypt-provisioning registered
+[    0.294473] Key type encrypted registered
+[    0.301681] mtk-scp 10500000.scp: creating channel cros-ec-rpmsg addr 0xd
+[    0.301721] mtk-scp 10500000.scp: SCP is ready. FW version cherry_scp_v2.0.11956-f9b0627e0
+[    0.301731] remoteproc remoteproc0: remote processor scp is now up
+[    0.302393] cros-ec-dev cros-ec-dev.17.auto: CrOS System Control Processor MCU detected
+[    0.303993] reg-fixed-voltage regulator-pp3300-ldo-z5: Looking up vin-supply from device tree
+[    0.304011] pp3300_ldo_z5: supplied by ppvar_sys
+[    0.304017] ppvar_sys: could not add device link regulator.54: -ENOENT
+[    0.304060] pp3300_ldo_z5: 3300 mV, enabled
+[    0.304164] reg-fixed-voltage regulator-pp3300-ldo-z5: pp3300_ldo_z5 supplying 3300000uV
+[    0.304691] reg-fixed-voltage regulator-pp3300-z2: Looking up vin-supply from device tree
+[    0.304703] pp3300_z2: supplied by ppvar_sys
+[    0.304712] ppvar_sys: could not add device link regulator.55: -ENOENT
+[    0.304737] pp3300_z2: 3300 mV, enabled
+[    0.304823] reg-fixed-voltage regulator-pp3300-z2: pp3300_z2 supplying 3300000uV
+[    0.304993] reg-fixed-voltage regulator-pp4200-z2: Looking up vin-supply from device tree
+[    0.305001] pp4200_z2: supplied by ppvar_sys
+[    0.305006] ppvar_sys: could not add device link regulator.56: -ENOENT
+[    0.305033] pp4200_z2: 4200 mV, enabled
+[    0.305117] reg-fixed-voltage regulator-pp4200-z2: pp4200_z2 supplying 4200000uV
+[    0.305430] reg-fixed-voltage regulator-pp5000-s5: Looking up vin-supply from device tree
+[    0.305439] pp5000_s5: supplied by ppvar_sys
+[    0.305444] ppvar_sys: could not add device link regulator.57: -ENOENT
+[    0.305477] pp5000_s5: 5000 mV, enabled
+[    0.305557] reg-fixed-voltage regulator-pp5000-s5: pp5000_s5 supplying 5000000uV
+[    0.306781] cros-ec-rpmsg 10500000.scp.cros-ec-rpmsg.13.-1: Chrome EC device registered
+[    0.307644] phy phy-soc:t-phy@11c40000.0: Looking up phy-supply from device tree
+[    0.307653] phy phy-soc:t-phy@11c40000.0: Looking up phy-supply property in node /soc/t-phy@11c40000/usb-phy@0 failed
+[    0.307932] mtk-msdc 11230000.mmc: msdc_track_cmd_data: cmd=1 arg=00000000; host->error=0x00000002
+[    0.308243] phy phy-soc:t-phy@11c50000.1: Looking up phy-supply from device tree
+[    0.308251] phy phy-soc:t-phy@11c50000.1: Looking up phy-supply property in node /soc/t-phy@11c50000/usb-phy@0 failed
+[    0.308684] phy phy-soc:t-phy@11e40000.2: Looking up phy-supply from device tree
+[    0.308692] phy phy-soc:t-phy@11e40000.2: Looking up phy-supply property in node /soc/t-phy@11e40000/usb-phy@0 failed
+[    0.308791] phy phy-soc:t-phy@11e40000.3: Looking up phy-supply from device tree
+[    0.308798] phy phy-soc:t-phy@11e40000.3: Looking up phy-supply property in node /soc/t-phy@11e40000/usb-phy@700 failed
+[    0.309634] sbs-battery 8-000b: sbs-battery: battery gas gauge device registered
+[    0.309997] mtk-mmsys 1c01a000.syscon: error -2 can't parse gce-client-reg property (0)
+[    0.316777] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/ovl@1c000000
+[    0.316925] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/rdma@1c002000
+[    0.316991] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/color@1c003000
+[    0.317053] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/ccorr@1c004000
+[    0.317111] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/aal@1c005000
+[    0.317174] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/gamma@1c006000
+[    0.317478] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/merge@1c014000
+[    0.317536] mediatek-drm mediatek-drm.23.auto: Adding component match for /soc/dp-intf@1c015000
+[    0.319093] mt_pmic_vmc_ldo: override min_uV, 1200000 -> 1800000
+[    0.319102] mt_pmic_vmc_ldo: override max_uV, 3600000 -> 3300000
+[    0.323609] mt_pmic_vmch_ldo: override min_uV, 2700000 -> 2900000
+[    0.323618] mt_pmic_vmch_ldo: override max_uV, 3600000 -> 3300000
+[    0.323753] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: Failed to get id. type: 2, alias: -19
+[    0.323773] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: Skipping unknown component /soc/merge@1c014000
+[    0.324204] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: Failed to get id. type: 2, alias: 5
+[    0.324220] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: Skipping unknown component /soc/vpp-merge@1c110000
+[    0.326809] mediatek-drm mediatek-drm.25.auto: Adding component match for /soc/vpp-merge@1c110000
+[    0.326877] mediatek-drm mediatek-drm.25.auto: Adding component match for /soc/dp-intf@1c113000
+[    0.329113] mtk-power-controller 10006000.syscon:power-controller: Looking up domain-supply from device tree
+[    0.329342] mtk-power-controller 10006000.syscon:power-controller: Looking up domain-supply from device tree
+[    0.329977] mt_pmic_vmc_ldo: 1800 <--> 3300 mV at 3300 mV, enabled
+[    0.330364] mtk-power-controller 10006000.syscon:power-controller: /soc/syscon@10006000/power-controller/power-domain@15/power-domain@16/power-domain@18/power-domain@20: A default off power domain has been ON
+[    0.339427] mt_pmic_vmch_ldo: 2900 <--> 3300 mV at 3300 mV, enabled
+[    0.339768] mtk-msdc 11230000.mmc: msdc_track_cmd_data: cmd=1 arg=00000000; host->error=0x00000002
+[    0.342155] panel-simple-dp-aux aux-1c500000.edp-tx: Looking up power-supply from device tree
+[    0.344066] panfrost 13000000.gpu: clock rate = 699999695
+[    0.344142] panfrost 13000000.gpu: Looking up mali-supply from device tree
+[    0.346054] panfrost 13000000.gpu: [drm:panfrost_devfreq_init] Failed to register cooling device
+[    0.346869] panfrost 13000000.gpu: mali-g57 id 0x9093 major 0x0 minor 0x1 status 0x0
+[    0.346889] panfrost 13000000.gpu: features: 00000000,000019f7, issues: 00000001,80000400
+[    0.346903] panfrost 13000000.gpu: Features: L2:0x07120206 Shader:0x00000000 Tiler:0x00000809 Mem:0x301 MMU:0x00002830 AS:0xff JS:0x7
+[    0.346919] panfrost 13000000.gpu: shader_present=0x50045 l2_present=0x1
+[    0.348219] [drm] Initialized panfrost 1.2.0 20180908 for 13000000.gpu on minor 1
+[    0.348685] mtu3 11201000.usb: Looking up vusb33-supply from device tree
+[    0.349071] mtu3 11201000.usb: uwk - reg:0x400, version:103
+[    0.349088] mtu3 11201000.usb: Looking up vbus-supply from device tree
+[    0.349157] mtu3 11201000.usb: dr_mode: 1, drd: auto
+[    0.349170] mtu3 11201000.usb: u2p_dis_msk: 0, u3p_dis_msk: 0
+[    0.349340] mtu3 11201000.usb: usb3-drd: 1
+[    0.350163] xhci-mtk 11200000.usb: Looking up vbus-supply from device tree
+[    0.350255] xhci-mtk 11200000.usb: Looking up vusb33-supply from device tree
+[    0.350262] xhci-mtk 11200000.usb: Looking up vusb33-supply property in node /soc/usb@11201000/usb@0 failed
+[    0.350304] xhci-mtk 11200000.usb: supply vusb33 not found, using dummy regulator
+[    0.350688] xhci-mtk 11200000.usb: xHCI Host Controller
+[    0.350712] xhci-mtk 11200000.usb: new USB bus registered, assigned bus number 1
+[    0.350824] xhci-mtk 11200000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000000200010
+[    0.350861] xhci-mtk 11200000.usb: irq 286, io mem 0x11200000
+[    0.350960] xhci-mtk 11200000.usb: xHCI Host Controller
+[    0.350975] xhci-mtk 11200000.usb: new USB bus registered, assigned bus number 2
+[    0.350992] xhci-mtk 11200000.usb: Host supports USB 3.2 Enhanced SuperSpeed
+[    0.351399] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[    0.351417] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.351430] usb usb1: Product: xHCI Host Controller
+[    0.351439] usb usb1: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    0.351450] usb usb1: SerialNumber: 11200000.usb
+[    0.351882] hub 1-0:1.0: USB hub found
+[    0.351955] hub 1-0:1.0: 1 port detected
+[    0.352308] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.352439] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+[    0.352455] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.352467] usb usb2: Product: xHCI Host Controller
+[    0.352477] usb usb2: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    0.352488] usb usb2: SerialNumber: 11200000.usb
+[    0.352857] hub 2-0:1.0: USB hub found
+[    0.352897] hub 2-0:1.0: 1 port detected
+[    0.353201] mtu3 11201000.usb: xHCI platform device register success...
+[    0.353766] mtu3 112a1000.usb: Looking up vusb33-supply from device tree
+[    0.354032] mtu3 112a1000.usb: uwk - reg:0x400, version:105
+[    0.354051] mtu3 112a1000.usb: Looking up vbus-supply from device tree
+[    0.354113] mtu3 112a1000.usb: dr_mode: 1, drd: auto
+[    0.354126] mtu3 112a1000.usb: u2p_dis_msk: 0, u3p_dis_msk: 0
+[    0.354256] mtu3 112a1000.usb: usb3-drd: 0
+[    0.354842] xhci-mtk 112a0000.usb: Looking up vbus-supply from device tree
+[    0.354910] xhci-mtk 112a0000.usb: Looking up vusb33-supply from device tree
+[    0.354917] xhci-mtk 112a0000.usb: Looking up vusb33-supply property in node /soc/usb@112a1000/usb@0 failed
+[    0.354955] xhci-mtk 112a0000.usb: supply vusb33 not found, using dummy regulator
+[    0.355274] xhci-mtk 112a0000.usb: xHCI Host Controller
+[    0.355293] xhci-mtk 112a0000.usb: new USB bus registered, assigned bus number 3
+[    0.355362] xhci-mtk 112a0000.usb: USB3 root hub has no ports
+[    0.355374] xhci-mtk 112a0000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000000200010
+[    0.355412] xhci-mtk 112a0000.usb: irq 287, io mem 0x112a0000
+[    0.355843] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[    0.355861] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.355873] usb usb3: Product: xHCI Host Controller
+[    0.355883] usb usb3: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    0.355894] usb usb3: SerialNumber: 112a0000.usb
+[    0.356248] hub 3-0:1.0: USB hub found
+[    0.356294] hub 3-0:1.0: 1 port detected
+[    0.356625] mtu3 112a1000.usb: xHCI platform device register success...
+[    0.357105] mtu3 112b1000.usb: Looking up vusb33-supply from device tree
+[    0.357441] mtu3 112b1000.usb: uwk - reg:0x400, version:106
+[    0.357458] mtu3 112b1000.usb: Looking up vbus-supply from device tree
+[    0.357517] mtu3 112b1000.usb: dr_mode: 1, drd: auto
+[    0.357535] mtu3 112b1000.usb: u2p_dis_msk: 0, u3p_dis_msk: 0
+[    0.357656] mtu3 112b1000.usb: usb3-drd: 0
+[    0.358252] xhci-mtk 112b0000.usb: Looking up vbus-supply from device tree
+[    0.358315] xhci-mtk 112b0000.usb: Looking up vusb33-supply from device tree
+[    0.358321] xhci-mtk 112b0000.usb: Looking up vusb33-supply property in node /soc/usb@112b1000/usb@0 failed
+[    0.358353] xhci-mtk 112b0000.usb: supply vusb33 not found, using dummy regulator
+[    0.358648] xhci-mtk 112b0000.usb: xHCI Host Controller
+[    0.358668] xhci-mtk 112b0000.usb: new USB bus registered, assigned bus number 4
+[    0.358736] xhci-mtk 112b0000.usb: USB3 root hub has no ports
+[    0.358748] xhci-mtk 112b0000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000020200010
+[    0.358790] xhci-mtk 112b0000.usb: irq 288, io mem 0x112b0000
+[    0.359236] usb usb4: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[    0.359254] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.359266] usb usb4: Product: xHCI Host Controller
+[    0.359276] usb usb4: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    0.359287] usb usb4: SerialNumber: 112b0000.usb
+[    0.359618] hub 4-0:1.0: USB hub found
+[    0.359690] hub 4-0:1.0: 1 port detected
+[    0.360021] mtu3 112b1000.usb: xHCI platform device register success...
+[    0.368508] mtk-msdc 11240000.mmc: Got CD GPIO
+[    0.368591] mtk-msdc 11240000.mmc: Looking up vmmc-supply from device tree
+[    0.368686] mtk-msdc 11240000.mmc: Looking up vqmmc-supply from device tree
+[    0.372494] input: cros_ec as /devices/platform/soc/1100a000.spi/spi_master/spi0/spi0.0/1100a000.spi:ec@0:keyboard-controller/input/input0
+[    0.372849] mtk-msdc 11230000.mmc: msdc_track_cmd_data: cmd=1 arg=00000000; host->error=0x00000002
+[    0.384056] phy phy-11e80000.phy.6: Looking up phy-supply from device tree
+[    0.384066] phy phy-11e80000.phy.6: Looking up phy-supply property in node /soc/phy@11e80000 failed
+[    0.384147] reg-fixed-voltage regulator-pp3300-s3: Looking up vin-supply from device tree
+[    0.384238] pp3300_s3: supplied by pp3300_z2
+[    0.384245] pp3300_z2: could not add device link regulator.60: -ENOENT
+[    0.384283] phy phy-soc:t-phy@11e30000.7: Looking up phy-supply from device tree
+[    0.384284] pp3300_s3: 3300 mV, enabled
+[    0.384288] phy phy-soc:t-phy@11e30000.7: Looking up phy-supply property in node /soc/t-phy@11e30000/usb-phy@0 failed
+[    0.384336] phy phy-soc:t-phy@11e30000.8: Looking up phy-supply from device tree
+[    0.384339] phy phy-soc:t-phy@11e30000.8: Looking up phy-supply property in node /soc/t-phy@11e30000/usb-phy@700 failed
+[    0.384390] reg-fixed-voltage regulator-pp3300-s3: pp3300_s3 supplying 3300000uV
+[    0.384410] pp3300_disp_x: 3300 mV, disabled
+[    0.384561] reg-fixed-voltage regulator-pp3300-disp-x: Looking up vin-supply from device tree
+[    0.384577] pp3300_disp_x: supplied by pp3300_z2
+[    0.384605] reg-fixed-voltage regulator-pp3300-disp-x: pp3300_disp_x supplying 3300000uV
+[    0.384619] mediatek-drm-dp 1c500000.edp-tx: Failed to create device link (0x180) with regulator-pp3300-disp-x
+[    0.384706] mtk-pcie-gen3 112f0000.pcie: host bridge /soc/pcie@112f0000 ranges:
+[    0.384717] mtk-pcie-gen3 112f0000.pcie:       IO 0x0020000000..0x00201fffff -> 0x0020000000
+[    0.384725] mtk-pcie-gen3 112f0000.pcie:      MEM 0x0020200000..0x0023ffffff -> 0x0020200000
+[    0.386453] sbs-battery 8-000b: I2C adapter does not support I2C_FUNC_SMBUS_READ_BLOCK_DATA.
+               Fallback method does not support PEC.
+[    0.397096] input: cros_ec_buttons as /devices/platform/soc/1100a000.spi/spi_master/spi0/spi0.0/1100a000.spi:ec@0:keyboard-controller/input/input1
+[    0.407816] mtk-msdc 11230000.mmc: msdc_track_cmd_data: cmd=1 arg=00000000; host->error=0x00000002
+[    0.408535] cros-ec-spi spi0.0: Chrome EC device registered
+[    0.409290] mmc0: Failed to initialize a non-removable card
+[    0.429963] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    0.638392] mtk-pcie-gen3 112f0000.pcie: PCI host bridge to bus 0000:00
+[    0.638426] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.638440] pci_bus 0000:00: root bus resource [io  0x0000-0x1fffff] (bus address [0x20000000-0x201fffff])
+[    0.638454] pci_bus 0000:00: root bus resource [mem 0x20200000-0x23ffffff]
+[    0.638490] pci 0000:00:00.0: [14c3:8195] type 01 class 0x060400 PCIe Root Port
+[    0.638518] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit pref]
+[    0.638535] pci 0000:00:00.0: PCI bridge to [bus 00]
+[    0.638550] pci 0000:00:00.0:   bridge window [io  0x0000-0x0fff]
+[    0.638562] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.638580] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.638657] pci 0000:00:00.0: supports D1 D2
+[    0.638667] pci 0000:00:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.641624] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.641731] pci 0000:01:00.0: [15b7:5015] type 00 class 0x010802 PCIe Endpoint
+[    0.641767] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit]
+[    0.641984] pci 0000:01:00.0: 15.752 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x2 link at 0000:00:00.0 (capable of 63.012 Gb/s with 16.0 GT/s PCIe x4 link)
+[    0.644253] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.644284] pci 0000:00:00.0: bridge window [mem 0x20200000-0x202fffff]: assigned
+[    0.644299] pci 0000:00:00.0: BAR 0 [mem 0x20300000-0x20303fff 64bit pref]: assigned
+[    0.644321] pci 0000:01:00.0: BAR 0 [mem 0x20200000-0x20203fff 64bit]: assigned
+[    0.644344] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.644357] pci 0000:00:00.0:   bridge window [mem 0x20200000-0x202fffff]
+[    0.644520] pcieport 0000:00:00.0: Adding to iommu group 0
+[    0.644775] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+[    0.646058] pcieport 0000:00:00.0: PME: Signaling with IRQ 294
+[    0.646383] pcieport 0000:00:00.0: AER: enabled with IRQ 294
+[    0.646571] nvme 0000:01:00.0: Adding to iommu group 0
+[    0.646870] nvme nvme0: pci function 0000:01:00.0
+[    0.646888] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    0.655138] nvme nvme0: allocated 32 MiB host memory buffer.
+[    0.657386] nvme nvme0: 8/0/0 default/read/poll queues
+[    0.662684]  nvme0n1: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12
+[    0.664617] mtk-pcie-gen3 112f8000.pcie: host bridge /soc/pcie@112f8000 ranges:
+[    0.664648] mtk-pcie-gen3 112f8000.pcie:       IO 0x0024000000..0x00241fffff -> 0x0024000000
+[    0.664669] mtk-pcie-gen3 112f8000.pcie:      MEM 0x0024200000..0x0027ffffff -> 0x0024200000
+[    0.749504] usb 3-1: new high-speed USB device number 2 using xhci-mtk
+[    0.749595] usb 1-1: new high-speed USB device number 2 using xhci-mtk
+[    0.757539] usb 4-1: new high-speed USB device number 2 using xhci-mtk
+[    0.878124] usb 3-1: New USB device found, idVendor=0408, idProduct=5476, bcdDevice= 0.06
+[    0.878233] usb 3-1: New USB device strings: Mfr=3, Product=1, SerialNumber=2
+[    0.878270] usb 3-1: Product: HP Wide Vision HD Camera
+[    0.878299] usb 3-1: Manufacturer: Quanta
+[    0.878326] usb 3-1: SerialNumber: 0001
+[    0.878615] mtk-pcie-gen3 112f8000.pcie: PCI host bridge to bus 0001:00
+[    0.878665] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    0.878703] pci_bus 0001:00: root bus resource [io  0x200000-0x3fffff] (bus address [0x24000000-0x241fffff])
+[    0.878744] pci_bus 0001:00: root bus resource [mem 0x24200000-0x27ffffff]
+[    0.878819] pci 0001:00:00.0: [14c3:8195] type 01 class 0x060400 PCIe Root Port
+[    0.878880] pci 0001:00:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit pref]
+[    0.878921] pci 0001:00:00.0: PCI bridge to [bus 00]
+[    0.878957] pci 0001:00:00.0:   bridge window [io  0x0000-0x0fff]
+[    0.878991] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.879034] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.879164] pci 0001:00:00.0: supports D1 D2
+[    0.879224] pci 0001:00:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.880555] usb 1-1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=66.01
+[    0.880601] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    0.880635] usb 1-1: Product: USB2.1 Hub
+[    0.880661] usb 1-1: Manufacturer: GenesysLogic
+[    0.882026] hub 1-1:1.0: USB hub found
+[    0.882444] hub 1-1:1.0: 3 ports detected
+[    0.887767] pci 0001:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.888016] pci 0001:01:00.0: [14c3:7961] type 00 class 0x028000 PCIe Endpoint
+[    0.888076] usb 4-1: New USB device found, idVendor=13d3, idProduct=3567, bcdDevice= 1.00
+[    0.888117] usb 4-1: New USB device strings: Mfr=5, Product=6, SerialNumber=7
+[    0.888149] usb 4-1: Product: Wireless_Device
+[    0.888176] usb 4-1: Manufacturer: MediaTek Inc.
+[    0.888222] usb 4-1: SerialNumber: 000000000
+[    0.888490] pci 0001:01:00.0: BAR 0 [mem 0x00000000-0x000fffff 64bit pref]
+[    0.888549] pci 0001:01:00.0: BAR 2 [mem 0x00000000-0x00003fff 64bit pref]
+[    0.888917] pci 0001:01:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit pref]
+[    0.889481] pci 0001:01:00.0: supports D1 D2
+[    0.889515] pci 0001:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.892602] pci_bus 0001:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.892678] pci 0001:00:00.0: bridge window [mem 0x24200000-0x243fffff 64bit pref]: assigned
+[    0.892724] pci 0001:00:00.0: BAR 0 [mem 0x24400000-0x24403fff 64bit pref]: assigned
+[    0.892778] pci 0001:01:00.0: BAR 0 [mem 0x24200000-0x242fffff 64bit pref]: assigned
+[    0.892833] pci 0001:01:00.0: BAR 2 [mem 0x24300000-0x24303fff 64bit pref]: assigned
+[    0.892888] pci 0001:01:00.0: BAR 4 [mem 0x24304000-0x24304fff 64bit pref]: assigned
+[    0.892941] pci 0001:00:00.0: PCI bridge to [bus 01]
+[    0.892978] pci 0001:00:00.0:   bridge window [mem 0x24200000-0x243fffff 64bit pref]
+[    0.893251] pcieport 0001:00:00.0: Adding to iommu group 0
+[    0.893436] pcieport 0001:00:00.0: enabling device (0000 -> 0002)
+[    0.896916] pcieport 0001:00:00.0: PME: Signaling with IRQ 306
+[    0.897666] pcieport 0001:00:00.0: AER: enabled with IRQ 306
+[    0.898970] pwm-backlight backlight-lcd0: Looking up power-supply from device tree
+[    0.899279] mediatek-drm-dp 1c500000.edp-tx: Failed to create device link (0x180) with backlight-lcd0
+[    0.900950] mediatek-mutex 1c016000.mutex: error -2 can't parse gce-client-reg property (0)
+[    0.901408] mediatek-mutex 1c101000.mutex: error -2 can't parse gce-client-reg property (0)
+[    0.902390]  SVSB_GPU_HIGH: cannot get "gpu" thermal zone
+[    0.902412] mtk-svs 1100bc00.svs: error -ENODEV: svs bank resource setup fail
+[    0.907936] mediatek-dpi 1c113000.dp-intf: Found bridge node: /soc/dp-tx@1c600000
+[    0.916240] panel-simple-dp-aux aux-1c500000.edp-tx: Looking up power-supply from device tree
+[    0.992534] usb 2-1: new SuperSpeed USB device number 2 using xhci-mtk
+[    1.008960] usb 2-1: New USB device found, idVendor=05e3, idProduct=0620, bcdDevice=66.01
+[    1.009032] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.009066] usb 2-1: Product: USB3.2 Hub
+[    1.009093] usb 2-1: Manufacturer: GenesysLogic
+[    1.010939] hub 2-1:1.0: USB hub found
+[    1.011440] hub 2-1:1.0: 3 ports detected
+[    1.151927] ------------[ cut here ]------------
+[    1.151964] WARNING: CPU: 1 PID: 104 at drivers/gpu/drm/panel/panel-edp.c:810 panel_edp_probe+0x4b4/0x510
+[    1.152024] Modules linked in:
+[    1.152053] CPU: 1 PID: 104 Comm: kworker/u32:5 Not tainted 6.8.0-rc6-next-20240228trimmed+ #9
+[    1.152093] Hardware name: HP Dojo (sku 1, 3, 5, 7) board (DT)
+[    1.152121] Workqueue: events_unbound deferred_probe_work_func
+[    1.152164] pstate: 80400009 (Nzcv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[    1.152199] pc : panel_edp_probe+0x4b4/0x510
+[    1.152230] lr : panel_edp_probe+0x2b8/0x510
+[    1.152260] sp : ffff800080ac3a80
+[    1.152281] x29: ffff800080ac3a80 x28: 0000000000000000 x27: 0000000000000000
+[    1.152328] x26: ffff18bbc0019c28 x25: 0000000000000000 x24: ffff18bbc013e60d
+[    1.152373] x23: 0000000000000000 x22: ffff18bbc2995f80 x21: ffff18bbc1a19800
+[    1.152418] x20: 0000000000000000 x19: ffff18bbc1d39680 x18: 0000000000000000
+[    1.152462] x17: 000000040044ffff x16: 005000f2b5503510 x15: 0000000000000000
+[    1.152508] x14: ffff18bbc03a8000 x13: ffff72f3afb86000 x12: ffffa5c94fa8ee78
+[    1.152553] x11: 0000000000000001 x10: 0000000000001b30 x9 : ffffa5c94de129b8
+[    1.152597] x8 : ffff18bbc2b0bd50 x7 : 0000000000000000 x6 : 0000000000000000
+[    1.152641] x5 : 0000000000000041 x4 : 000000000000cb8f x3 : 000000000000004f
+[    1.152685] x2 : ffffa5c94ea207b8 x1 : 0000000000000000 x0 : 0000000006afcb8f
+[    1.152729] Call trace:
+[    1.152749]  panel_edp_probe+0x4b4/0x510
+[    1.152781]  panel_edp_dp_aux_ep_probe+0x40/0x60
+[    1.152814]  dp_aux_ep_probe+0x3c/0x108
+[    1.152846]  really_probe+0x18c/0x3d8
+[    1.152877]  __driver_probe_device+0x84/0x180
+[    1.152909]  driver_probe_device+0x44/0x120
+[    1.152941]  __device_attach_driver+0xc4/0x168
+[    1.152972]  bus_for_each_drv+0x88/0xf0
+[    1.153003]  __device_attach+0xa4/0x1c0
+[    1.153034]  device_initial_probe+0x1c/0x30
+[    1.153065]  bus_probe_device+0xb4/0xc0
+[    1.153095]  deferred_probe_work_func+0xa4/0x100
+[    1.153127]  process_one_work+0x158/0x418
+[    1.153161]  worker_thread+0x304/0x420
+[    1.153192]  kthread+0x11c/0x128
+[    1.153222]  ret_from_fork+0x10/0x20
+[    1.153253] ---[ end trace 0000000000000000 ]---
+[    1.153310] panel-simple-dp-aux aux-1c500000.edp-tx: Unknown panel AUO 0xcb8f, using conservative timings
+[    1.155225] xhci-mtk 11290000.usb: Looking up vbus-supply from device tree
+[    1.155445] xhci-mtk 11290000.usb: Looking up vusb33-supply from device tree
+[    1.155911] xhci-mtk 11290000.usb: uwk - reg:0x400, version:104
+[    1.156711] xhci-mtk 11290000.usb: xHCI Host Controller
+[    1.156763] xhci-mtk 11290000.usb: new USB bus registered, assigned bus number 5
+[    1.156907] xhci-mtk 11290000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000000200010
+[    1.157012] xhci-mtk 11290000.usb: irq 307, io mem 0x11290000
+[    1.157274] xhci-mtk 11290000.usb: xHCI Host Controller
+[    1.157317] xhci-mtk 11290000.usb: new USB bus registered, assigned bus number 6
+[    1.157359] xhci-mtk 11290000.usb: Host supports USB 3.2 Enhanced SuperSpeed
+[    1.157722] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[    1.157768] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.157804] usb usb5: Product: xHCI Host Controller
+[    1.157832] usb usb5: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    1.157865] usb usb5: SerialNumber: 11290000.usb
+[    1.158704] hub 5-0:1.0: USB hub found
+[    1.158776] hub 5-0:1.0: 1 port detected
+[    1.159506] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.159827] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+[    1.159874] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.159911] usb usb6: Product: xHCI Host Controller
+[    1.159939] usb usb6: Manufacturer: Linux 6.8.0-rc6-next-20240228trimmed+ xhci-hcd
+[    1.159973] usb usb6: SerialNumber: 11290000.usb
+[    1.160900] hub 6-0:1.0: USB hub found
+[    1.160981] hub 6-0:1.0: 1 port detected
+[    1.162572] elan_i2c 1-0015: Looking up vcc-supply from device tree
+[    1.175013] i2c_hid_of 4-0015: Looking up vdd-supply from device tree
+[    1.175254] i2c_hid_of 4-0015: Looking up vddl-supply from device tree
+[    1.175275] i2c_hid_of 4-0015: Looking up vddl-supply property in node /soc/i2c@11e04000/touchscreen@15 failed
+[    1.175371] i2c_hid_of 4-0015: supply vddl not found, using dummy regulator
+[    1.277617] elan_i2c 1-0015: Elan Touchpad: Module ID: 0x012c, Firmware: 0x0002, Sample: 0x0004, IAP: 0x0001
+[    1.278194] input: Elan Touchpad as /devices/platform/soc/11e01000.i2c/i2c-1/1-0015/input/input2
+[    1.285387] usb 2-1.1: new SuperSpeed USB device number 3 using xhci-mtk
+[    1.292227] input: hid-over-i2c 04F3:4078 as /devices/platform/soc/11e04000.i2c/i2c-4/4-0015/0018:04F3:4078.0001/input/input3
+[    1.292547] input: hid-over-i2c 04F3:4078 UNKNOWN as /devices/platform/soc/11e04000.i2c/i2c-4/4-0015/0018:04F3:4078.0001/input/input4
+[    1.292861] input: hid-over-i2c 04F3:4078 UNKNOWN as /devices/platform/soc/11e04000.i2c/i2c-4/4-0015/0018:04F3:4078.0001/input/input5
+[    1.293176] input: hid-over-i2c 04F3:4078 Stylus as /devices/platform/soc/11e04000.i2c/i2c-4/4-0015/0018:04F3:4078.0001/input/input6
+[    1.293514] input: hid-over-i2c 04F3:4078 UNKNOWN as /devices/platform/soc/11e04000.i2c/i2c-4/4-0015/0018:04F3:4078.0001/input/input7
+[    1.294017] hid-multitouch 0018:04F3:4078.0001: input,hidraw0: I2C HID v1.00 Device [hid-over-i2c 04F3:4078] on 4-0015
+[    1.295270] hub 1-1:1.0: USB hub found
+[    1.295567] hub 1-1:1.0: 3 ports detected
+[    1.298058] usb 2-1.1: New USB device found, idVendor=0bda, idProduct=8153, bcdDevice=30.00
+[    1.298085] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[    1.298105] usb 2-1.1: Product: USB 10/100/1000 LAN
+[    1.298119] usb 2-1.1: Manufacturer: Realtek
+[    1.298133] usb 2-1.1: SerialNumber: C95BA3
+[    1.299157] mtk-iommu 14018000.iommu: bound 1c019000.larb (ops mtk_smi_larb_component_ops)
+[    1.299211] mtk-iommu 14018000.iommu: bound 1c103000.larb (ops mtk_smi_larb_component_ops)
+[    1.299240] mtk-iommu 14018000.iommu: bound 14013000.larb (ops mtk_smi_larb_component_ops)
+[    1.299265] mtk-iommu 14018000.iommu: bound 14f03000.larb (ops mtk_smi_larb_component_ops)
+[    1.299291] mtk-iommu 14018000.iommu: bound 14e05000.larb (ops mtk_smi_larb_component_ops)
+[    1.299317] mtk-iommu 14018000.iommu: bound 15340000.larb (ops mtk_smi_larb_component_ops)
+[    1.299342] mtk-iommu 14018000.iommu: bound 16002000.larb (ops mtk_smi_larb_component_ops)
+[    1.299367] mtk-iommu 14018000.iommu: bound 16012000.larb (ops mtk_smi_larb_component_ops)
+[    1.299392] mtk-iommu 14018000.iommu: bound 17201000.larb (ops mtk_smi_larb_component_ops)
+[    1.299417] mtk-iommu 14018000.iommu: bound 1b010000.larb (ops mtk_smi_larb_component_ops)
+[    1.299463] mtk-iommu 14018000.iommu: bound 1803e000.larb (ops mtk_smi_larb_component_ops)
+[    1.299500] mtk-iommu 14018000.iommu: bound 1800e000.larb (ops mtk_smi_larb_component_ops)
+[    1.299526] mtk-iommu 14018000.iommu: bound 16142000.larb (ops mtk_smi_larb_component_ops)
+[    1.299551] mtk-iommu 14018000.iommu: bound 16014000.larb (ops mtk_smi_larb_component_ops)
+[    1.301282] mtk-iommu 1c01f000.iommu: bound 1c018000.larb (ops mtk_smi_larb_component_ops)
+[    1.301318] mtk-iommu 1c01f000.iommu: bound 1c102000.larb (ops mtk_smi_larb_component_ops)
+[    1.301344] mtk-iommu 1c01f000.iommu: bound 14f02000.larb (ops mtk_smi_larb_component_ops)
+[    1.301370] mtk-iommu 1c01f000.iommu: bound 14e04000.larb (ops mtk_smi_larb_component_ops)
+[    1.301396] mtk-iommu 1c01f000.iommu: bound 15001000.larb (ops mtk_smi_larb_component_ops)
+[    1.301421] mtk-iommu 1c01f000.iommu: bound 15120000.larb (ops mtk_smi_larb_component_ops)
+[    1.301446] mtk-iommu 1c01f000.iommu: bound 15230000.larb (ops mtk_smi_larb_component_ops)
+[    1.301471] mtk-iommu 1c01f000.iommu: bound 16001000.larb (ops mtk_smi_larb_component_ops)
+[    1.301496] mtk-iommu 1c01f000.iommu: bound 16013000.larb (ops mtk_smi_larb_component_ops)
+[    1.301521] mtk-iommu 1c01f000.iommu: bound 1a010000.larb (ops mtk_smi_larb_component_ops)
+[    1.301546] mtk-iommu 1c01f000.iommu: bound 1802e000.larb (ops mtk_smi_larb_component_ops)
+[    1.301571] mtk-iommu 1c01f000.iommu: bound 1800d000.larb (ops mtk_smi_larb_component_ops)
+[    1.301596] mtk-iommu 1c01f000.iommu: bound 16141000.larb (ops mtk_smi_larb_component_ops)
+[    1.301621] mtk-iommu 1c01f000.iommu: bound 16015000.larb (ops mtk_smi_larb_component_ops)
+[    1.302400] mediatek-disp-ovl 1c000000.ovl: Adding to iommu group 1
+[    1.302763] mediatek-disp-ovl 1c000000.ovl: failed to get gce-events for crc
+[    1.302789] mediatek-disp-ovl 1c000000.ovl: failed to request channel
+[    1.302806] mediatek-disp-ovl 1c000000.ovl: mtk_drm_crc_cmdq_create: failed to create mailbox client
+[    1.303443] mediatek-disp-rdma 1c002000.rdma: Adding to iommu group 1
+[    1.304048] mediatek-dpi 1c015000.dp-intf: Found bridge node: /soc/edp-tx@1c500000
+[    1.305265] mediatek-drm mediatek-drm.23.auto: bound 1c000000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.305299] mediatek-drm mediatek-drm.23.auto: bound 1c002000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.305326] mediatek-drm mediatek-drm.23.auto: bound 1c003000.color (ops mtk_disp_color_component_ops)
+[    1.305351] mediatek-drm mediatek-drm.23.auto: bound 1c004000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.305376] mediatek-drm mediatek-drm.23.auto: bound 1c005000.aal (ops mtk_disp_aal_component_ops)
+[    1.305400] mediatek-drm mediatek-drm.23.auto: bound 1c006000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.305424] mediatek-drm mediatek-drm.23.auto: bound 1c014000.merge (ops mtk_disp_merge_component_ops)
+[    1.315572] mediatek-drm mediatek-drm.23.auto: bound 1c015000.dp-intf (ops mtk_dpi_component_ops)
+[    1.316925] mediatek-disp-ethdr 1c114000.hdr-engine: Adding to iommu group 1
+[    1.317015] mediatek-disp-ethdr 1c114000.hdr-engine: failed to get gce-events for crc
+[    1.317032] mediatek-disp-ethdr 1c114000.hdr-engine: failed to request channel
+[    1.317043] mediatek-disp-ethdr 1c114000.hdr-engine: mtk_drm_crc_cmdq_create: failed to create mailbox client
+[    1.317605] mediatek-mdp-rdma 1c104000.dma-controller: Adding to iommu group 1
+[    1.317989] mediatek-mdp-rdma 1c105000.dma-controller: Adding to iommu group 1
+[    1.318388] mediatek-mdp-rdma 1c106000.dma-controller: Adding to iommu group 1
+[    1.318752] mediatek-mdp-rdma 1c107000.dma-controller: Adding to iommu group 1
+[    1.319140] mediatek-mdp-rdma 1c108000.dma-controller: Adding to iommu group 1
+[    1.319520] mediatek-mdp-rdma 1c109000.dma-controller: Adding to iommu group 1
+[    1.319891] mediatek-mdp-rdma 1c10a000.dma-controller: Adding to iommu group 1
+[    1.320674] mediatek-mdp-rdma 1c10b000.dma-controller: Adding to iommu group 1
+[    1.320785] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c104000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.320838] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c105000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.320880] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c106000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.320922] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c107000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.320963] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c108000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.321019] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c109000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.321068] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10a000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.321109] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10b000.dma-controller (ops mtk_mdp_rdma_component_ops)
+[    1.321149] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10c000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.321207] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10d000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.321247] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10e000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.321286] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c10f000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.321324] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.26.auto: bound 1c114000.hdr-engine (ops mtk_ethdr_component_ops)
+[    1.364560] usb 2-1.3: new SuperSpeed USB device number 4 using xhci-mtk
+[    1.378344] usb 2-1.3: New USB device found, idVendor=090c, idProduct=1000, bcdDevice=11.00
+[    1.378413] usb 2-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.378449] usb 2-1.3: Product: Flash Drive FIT
+[    1.378477] usb 2-1.3: Manufacturer: Samsung
+[    1.378503] usb 2-1.3: SerialNumber: 0302821050015587
+[    1.380171] usb-storage 2-1.3:1.0: USB Mass Storage device detected
+[    1.381101] scsi host0: usb-storage 2-1.3:1.0
+[    1.382075] usb 2-1.1: USB disconnect, device number 3
+[    1.382820] usb 2-1.3: USB disconnect, device number 4
+[    1.398273] hub 2-1:1.0: USB hub found
+[    1.398633] hub 2-1:1.0: 3 ports detected
+[    1.401157] mtk-jpeg soc:jpgdec-master: Adding to iommu group 2
+[    1.402397] mtk-jpegdec-hw 1a040000.jpgdec: Adding to iommu group 2
+[    1.403768] mtk-jpegdec-hw 1a050000.jpgdec: Adding to iommu group 2
+[    1.405787] mtk-jpegdec-hw 1b040000.jpgdec: Adding to iommu group 2
+[    1.407079] mtk-jpeg soc:jpgdec-master: mtk-jpeg-dec device registered as /dev/video0 (81,0)
+[    1.408775] mtk-jpeg soc:jpgenc-master: Adding to iommu group 2
+[    1.410573] mtk-jpegenc-hw 1a030000.jpgenc: Adding to iommu group 2
+[    1.412566] mtk-jpegenc-hw 1b030000.jpgenc: Adding to iommu group 2
+[    1.413609] mtk-jpeg soc:jpgenc-master: mtk-jpeg-enc device registered as /dev/video1 (81,1)
+[    1.415297] mtk-vcodec-enc 1a020000.video-codec: Adding to iommu group 2
+[    1.417649] mtk-vcodec-dec 18000000.video-codec: Adding to iommu group 2
+[    1.419558] mtk-vdec-comp 18002000.video-codec: Adding to iommu group 2
+[    1.420720] mtk-vdec-comp 18010000.video-codec: Adding to iommu group 2
+[    1.421824] mtk-vdec-comp 18025000.video-codec: Adding to iommu group 2
+[    1.423511] mtk-mdp3 14001000.dma-controller: Adding to iommu group 3
+[    1.427987] mtk-mdp3 14001000.dma-controller: can't get SCP node
+[    1.428295] mtk-mdp3 14001000.dma-controller: Driver registered as /dev/video4
+[    1.429055] mtk-mdp3 1400c000.dma-controller: Adding to iommu group 3
+[    1.429740] mtk-mdp3 14f08000.dma-controller: Adding to iommu group 3
+[    1.430417] mtk-mdp3 14f09000.dma-controller: Adding to iommu group 3
+[    1.431031] mtk-mdp3 14f0a000.dma-controller: Adding to iommu group 3
+[    1.431831] mtk-mdp3 14f23000.dma-controller: Adding to iommu group 3
+[    1.432623] mtk-mdp3 14f24000.dma-controller: Adding to iommu group 3
+[    1.433391] mtk-mdp3 14f25000.dma-controller: Adding to iommu group 3
+[    1.433921] mediatek-dpi 1c015000.dp-intf: Found bridge node: /soc/edp-tx@1c500000
+[    1.435048] mediatek-drm mediatek-drm.23.auto: bound 1c000000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.435084] mediatek-drm mediatek-drm.23.auto: bound 1c002000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.435109] mediatek-drm mediatek-drm.23.auto: bound 1c003000.color (ops mtk_disp_color_component_ops)
+[    1.435132] mediatek-drm mediatek-drm.23.auto: bound 1c004000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.435156] mediatek-drm mediatek-drm.23.auto: bound 1c005000.aal (ops mtk_disp_aal_component_ops)
+[    1.435178] mediatek-drm mediatek-drm.23.auto: bound 1c006000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.435223] mediatek-drm mediatek-drm.23.auto: bound 1c014000.merge (ops mtk_disp_merge_component_ops)
+[    1.445549] mediatek-drm mediatek-drm.23.auto: bound 1c015000.dp-intf (ops mtk_dpi_component_ops)
+[    1.445601] mediatek-drm mediatek-drm.25.auto: bound mediatek-disp-ovl-adaptor.26.auto (ops mtk_disp_ovl_adaptor_comp_ops)
+[    1.445642] mediatek-drm mediatek-drm.25.auto: bound 1c110000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.453604] mediatek-drm mediatek-drm.25.auto: bound 1c113000.dp-intf (ops mtk_dpi_component_ops)
+[    1.455337] [drm] Initialized mediatek 1.0.0 20150513 for mediatek-drm.23.auto on minor 2
+[    1.574547] usb 2-1.1: new SuperSpeed USB device number 5 using xhci-mtk
+[    1.588225] usb 2-1.1: New USB device found, idVendor=0bda, idProduct=8153, bcdDevice=30.00
+[    1.588274] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[    1.588310] usb 2-1.1: Product: USB 10/100/1000 LAN
+[    1.588338] usb 2-1.1: Manufacturer: Realtek
+[    1.588364] usb 2-1.1: SerialNumber: C95BA3
+[    1.656579] usb 2-1.3: new SuperSpeed USB device number 6 using xhci-mtk
+[    1.670960] usb 2-1.3: New USB device found, idVendor=090c, idProduct=1000, bcdDevice=11.00
+[    1.670988] usb 2-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.670999] usb 2-1.3: Product: Flash Drive FIT
+[    1.671008] usb 2-1.3: Manufacturer: Samsung
+[    1.671016] usb 2-1.3: SerialNumber: 0302821050015587
+[    1.672991] usb-storage 2-1.3:1.0: USB Mass Storage device detected
+[    1.674537] scsi host0: usb-storage 2-1.3:1.0
+[    1.727303] usb 2-1.1: USB disconnect, device number 5
+[    1.728218] usb 2-1.3: USB disconnect, device number 6
+[    1.855801] usb 2-1: reset SuperSpeed USB device number 2 using xhci-mtk
+[    1.887666] Console: switching to colour frame buffer device 240x67
+[    1.924871] mediatek-drm mediatek-drm.23.auto: [drm] fb0: mediatekdrmfb frame buffer device
+[    2.149389] usb 2-1.1: new SuperSpeed USB device number 7 using xhci-mtk
+[    2.162433] usb 2-1.1: New USB device found, idVendor=0bda, idProduct=8153, bcdDevice=30.00
+[    2.162621] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[    2.162772] usb 2-1.1: Product: USB 10/100/1000 LAN
+[    2.162882] usb 2-1.1: Manufacturer: Realtek
+[    2.162980] usb 2-1.1: SerialNumber: C95BA3
+[    2.231385] usb 2-1.3: new SuperSpeed USB device number 8 using xhci-mtk
+[    2.244923] usb 2-1.3: New USB device found, idVendor=090c, idProduct=1000, bcdDevice=11.00
+[    2.245109] usb 2-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.245280] usb 2-1.3: Product: Flash Drive FIT
+[    2.245383] usb 2-1.3: Manufacturer: Samsung
+[    2.245481] usb 2-1.3: SerialNumber: 0302821050015587
+[    2.247374] usb-storage 2-1.3:1.0: USB Mass Storage device detected
+[    2.248356] scsi host0: usb-storage 2-1.3:1.0
+[    4.011507] hid_bpf: error while preloading HID BPF dispatcher: -22
+[    4.011607] clk: Disabling unused clocks
+[    4.012175] PM: genpd: Disabling unused power domains
+[    4.012355] ALSA device list:
+[    4.012365]   No soundcards found.
+[    4.035238] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    5.394588] scsi 0:0:0:0: Direct-Access     Samsung  Flash Drive FIT  1100 PQ: 0 ANSI: 6
+[    5.398350] sd 0:0:0:0: [sda] 501253132 512-byte logical blocks: (257 GB/239 GiB)
+[    5.398678] sd 0:0:0:0: [sda] Write Protect is off
+[    5.398728] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[    5.398978] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    5.409868]  sda: sda1 sda2 sda3
+[    5.414078] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[    5.438728] EXT4-fs (nvme0n1p1): mounted filesystem 83b2f9a3-9f59-401b-84a1-fd0b87a83378 r/w with ordered data mode. Quota mode: journalled.
+[    5.439517] VFS: Mounted root (ext4 filesystem) on device 259:1.
+[    5.440895] devtmpfs: mounted
+[    5.444222] Freeing unused kernel memory: 9344K
+[    5.445099] Run /sbin/init as init process
+[    5.445840]   with arguments:
+[    5.445844]     /sbin/init
+[    5.445845]     cros_secure
+[    5.445847]     verbose
+[    5.445849]   with environment:
+[    5.445851]     HOME=/
+[    5.445852]     TERM=linux
+[    5.445854]     biosdevname=0
+[    5.499893] LoadPin: nvme0n1p1 (259:1): writable
+[    5.501597] LoadPin: kernel-module pinned obj="/usr/lib/modules/6.8.0-rc6-next-20240228trimmed+/kernel/net/ipv6/ipv6.ko" pid=1 cmdline="/sbin/init cros_secure verbose"
+[    5.531198] NET: Registered PF_INET6 protocol family
+[    5.533593] Segment Routing with IPv6
+[    5.534440] In-situ OAM (IOAM) with IPv6
+[    5.544086] systemd[1]: systemd 252.22-1~deb12u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    5.545916] systemd[1]: Detected architecture arm64.
+[    5.553665] systemd[1]: Hostname set to <laptopA78>.
+[    5.798758] systemd[1]: Queued start job for default target graphical.target.
+[    5.810721] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[    5.815119] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[    5.818739] systemd[1]: Created slice user.slice - User and Session Slice.
+[    5.822570] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[    5.826003] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[    5.829769] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[    5.832404] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[    5.835094] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[    5.838156] systemd[1]: Reached target slices.target - Slice Units.
+[    5.839554] systemd[1]: Reached target swap.target - Swaps.
+[    5.840915] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[    5.846209] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[    5.848945] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[    5.853253] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    5.855003] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[    5.861536] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    5.865154] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    5.884836] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[    5.891618] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[    5.899219] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[    5.902973] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[    5.917017] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    5.921064] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[    5.929390] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[    5.933240] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[    5.944323] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[    5.949700] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[    5.956135] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[    5.958750] fuse: init (API version 7.40)
+[    5.965664] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    5.970655] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    5.974298] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[    5.978357] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    5.987355] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[    5.990104] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[    5.992926] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[    5.996675] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[    6.000355] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[    6.003223] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    6.004750] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[    6.005025] EXT4-fs (nvme0n1p1): re-mounted 83b2f9a3-9f59-401b-84a1-fd0b87a83378 r/w. Quota mode: journalled.
+[    6.008098] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+[    6.009145] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+[    6.011486] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    6.012645] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[    6.014866] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    6.015936] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[    6.018149] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    6.019323] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[    6.021582] systemd[1]: modprobe@loop.service: Deactivated successfully.
+[    6.022626] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+[    6.024846] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[    6.027034] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[    6.034553] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.038733] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[    6.047376] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[    6.050265] systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[    6.052544] systemd[1]: Starting systemd-pstore.service - Platform Persistent Storage Archival...
+[    6.062220] systemd[1]: Starting systemd-random-seed.service - Load/Save Random Seed...
+[    6.064864] systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+[    6.067200] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[    6.070628] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+[    6.076749] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[    6.079731] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[    6.081985] systemd[1]: Finished systemd-pstore.service - Platform Persistent Storage Archival.
+[    6.082637] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.085441] systemd[1]: Finished systemd-random-seed.service - Load/Save Random Seed.
+[    6.087762] systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+[    6.089933] systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[    6.101772] systemd[1]: Finished systemd-sysusers.service - Create System Users.
+[    6.104588] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.117684] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+[    6.127481] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.149522] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.154562] systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[    6.157544] systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+[    6.159658] systemd[1]: Set up automount boot.automount - EFI System Partition Automount.
+[    6.161536] systemd[1]: Reached target local-fs.target - Local File Systems.
+[    6.163376] systemd[1]: apparmor.service - Load AppArmor profiles was skipped because of an unmet condition check (ConditionSecurity=apparmor).
+[    6.171813] systemd[1]: Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+[    6.174026] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.177053] systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+[    6.179520] systemd[1]: systemd-machine-id-commit.service - Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+[    6.182405] systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+[    6.189523] systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+[    6.196516] systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 216 (systemd-binfmt)
+[    6.209774] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.210594] synth uevent: /devices/platform/soc/1100a000.spi/spi_master/spi0/spi0.0/1100a000.spi:ec@0:i2c-tunnel/i2c-8/8-000b/power_supply/sbs-8-000b: failed to send uevent
+[    6.210726] power_supply sbs-8-000b: driver failed to report `temp' property: -6
+[    6.211358] power_supply sbs-8-000b: uevent: failed to send synthetic uevent: -5
+[    6.230039] systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+[    6.238014] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.251902] systemd[1]: Starting ifupdown-pre.service - Helper to synchronize boot up for ifupdown...
+[    6.255413] systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[    6.261218] systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+[    6.262448] power_supply sbs-8-000b: driver failed to report `time_to_empty_now' property: -5
+[    6.266277] systemd[1]: Finished ifupdown-pre.service - Helper to synchronize boot up for ifupdown.
+[    6.269437] systemd[1]: Received SIGRTMIN+20 from PID 240 (plymouthd).
+[    6.274731] systemd[1]: Starting networking.service - Raise network interfaces...
+[    6.302545] systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+[    6.341380] systemd[1]: Started systemd-journald.service - Journal Service.
+[    6.446729] systemd-journald[200]: Received client request to flush runtime journal.
+[    6.539579] mt8195-audio 10890000.mt8195-afe-pcm: assigned reserved memory node memory@60d80000
+[    6.554722] mt8195-audio 10890000.mt8195-afe-pcm: mtk_afe_combine_sub_dai(), num of dai 26
+[    6.555501] mt8195-audio 10890000.mt8195-afe-pcm: No cache defaults, reading back from HW
+[    6.578963] sof-audio-of-mt8195 10803000.dsp: DT DSP detected
+[    6.579157] max98390 2-0038: no optional property 'temperature_calib' found, default:
+[    6.579212] sof-audio-of-mt8195 10803000.dsp: assigned reserved memory node memory@60e80000
+[    6.579699] max98390 2-0038: no optional property 'r0_calib' found, default:
+[    6.579824] max98390 2-0038: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+[    6.580887] usbcore: registered new device driver r8152-cfgselector
+[    6.582003] rt5682s 2-001a: Using default DAI clk names: rt5682-dai-wclk, rt5682-dai-bclk
+[    6.582549] rt5682s 2-001a: Looking up AVDD-supply from device tree
+[    6.584396] max98390 2-0038: ret=-6, Failed to read: 0x24FF
+[    6.586607] sof-audio-of-mt8195 10803000.dsp: Firmware paths/files for ipc type 0:
+[    6.586673] sof-audio-of-mt8195 10803000.dsp:  Firmware file:     mediatek/sof/dojo/sof-mt8195.ri
+[    6.586690] sof-audio-of-mt8195 10803000.dsp:  Topology file:     mediatek/sof-tplg/dojo/sof-mt8195-mt6359-max98390-rt5682.tplg
+[    6.587308] sof-audio-of-mt8195 10803000.dsp: Firmware info: version 2:0:0-73798
+[    6.587337] sof-audio-of-mt8195 10803000.dsp: Firmware: ABI 3:21:0 Kernel ABI 3:23:0
+[    6.587358] sof-audio-of-mt8195 10803000.dsp: unknown sof_ext_man header type 3 size 0x30
+[    6.595478] sof-audio-of-mt8195 10803000.dsp: Firmware info: version 2:0:0-73798
+[    6.595583] sof-audio-of-mt8195 10803000.dsp: Firmware: ABI 3:21:0 Kernel ABI 3:23:0
+[    6.599383] rt5682s 2-001a: Looking up MICVDD-supply from device tree
+[    6.600738] rt5682s 2-001a: Looking up DBVDD-supply from device tree
+[    6.600748] rt5682s 2-001a: Looking up DBVDD-supply property in node /soc/i2c@11e02000/codec@1a failed
+[    6.600788] rt5682s 2-001a: supply DBVDD not found, using dummy regulator
+[    6.601203] max98390 2-0039: no optional property 'temperature_calib' found, default:
+[    6.601534] max98390 2-0039: no optional property 'r0_calib' found, default:
+[    6.601821] max98390 2-0039: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+[    6.602462] max98390 2-0039: ret=-6, Failed to read: 0x24FF
+[    6.616641] rt5682s 2-001a: Looking up LDO1-IN-supply from device tree
+[    6.616652] rt5682s 2-001a: Looking up LDO1-IN-supply property in node /soc/i2c@11e02000/codec@1a failed
+[    6.616681] rt5682s 2-001a: supply LDO1-IN not found, using dummy regulator
+[    6.623162] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    6.625107] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    6.625962] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    6.692599] r8152-cfgselector 2-1.1: reset SuperSpeed USB device number 7 using xhci-mtk
+[    6.709631] cfg80211: loaded regulatory.db is malformed or signature is missing/invalid
+[    6.734393] r8152 2-1.1:1.0: load rtl8153a-4 v2 02/07/20 successfully
+[    6.762415] r8152 2-1.1:1.0 eth0: v1.12.13
+[    6.762534] usbcore: registered new interface driver r8152
+[    6.837796] usbcore: registered new interface driver cdc_ether
+[    6.838364] usb 3-1: Found UVC 1.10 device HP Wide Vision HD Camera (0408:5476)
+[    6.844478] usbcore: registered new interface driver uvcvideo
+[    6.844749] usbcore: registered new interface driver r8153_ecm
+[    6.871778] Bluetooth: Core ver 2.22
+[    6.872178] NET: Registered PF_BLUETOOTH protocol family
+[    6.872700] Bluetooth: HCI device and connection manager initialized
+[    6.873249] Bluetooth: HCI socket layer initialized
+[    6.873307] Bluetooth: L2CAP socket layer initialized
+[    6.875736] Bluetooth: SCO socket layer initialized
+[    6.907514] usbcore: registered new interface driver btusb
+[    6.912165] Bluetooth: hci0: HW/SW Version: 0x008a008a, Build Time: 20230526131214
+[    6.940141] mt7921e 0001:01:00.0: Adding to iommu group 0
+[    6.940177] mt7921e 0001:01:00.0: enabling device (0000 -> 0002)
+[    6.945383] mt7921e 0001:01:00.0: ASIC revision: 79610010
+[    7.024753] mt7921e 0001:01:00.0: HW/SW Version: 0x8a108a10, Build Time: 20230331110902a
+
+[    7.284383] mt7921e 0001:01:00.0: WM Firmware Version: ____010000, Build Time: 20230331110939
+[    8.748420] warning: `iwconfig' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+[    9.896213] Bluetooth: hci0: Device setup in 2918659 usecs
+[    9.896241] Bluetooth: hci0: HCI Enhanced Setup Synchronous Connection command is advertised, but not supported.
+[    9.963351] Bluetooth: hci0: AOSP extensions version v1.00
+[    9.963368] Bluetooth: hci0: AOSP quality report is supported
+[    9.966316] Bluetooth: MGMT ver 1.22
+[   10.224514] r8152 2-1.1:1.0 eth0: carrier on
+[   34.275628] vproc2: disabling
+[   34.279535] vproc1: disabling
+[   34.281293] vaud18: disabling
+[   34.283291] va09: disabling
+[   34.288243] vsram_md: disabling

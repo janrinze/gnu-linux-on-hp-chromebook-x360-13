@@ -1,0 +1,51 @@
+Module                  Size  Used by
+iptable_nat            12288  0
+nf_nat                 53248  1 iptable_nat
+iptable_mangle         12288  0
+iptable_filter         12288  0
+mt7921e                16384  0
+mt7921_common          69632  1 mt7921e
+mt792x_lib             57344  2 mt7921e,mt7921_common
+mt76_connac_lib        81920  3 mt792x_lib,mt7921e,mt7921_common
+btusb                  69632  0
+mt76                  118784  4 mt792x_lib,mt7921e,mt7921_common,mt76_connac_lib
+btintel                57344  1 btusb
+btmtk                  12288  1 btusb
+btrtl                  32768  1 btusb
+btbcm                  20480  1 btusb
+mac80211              987136  4 mt792x_lib,mt76,mt7921_common,mt76_connac_lib
+bluetooth             790528  30 btrtl,btmtk,btintel,btbcm,btusb
+r8153_ecm              12288  0
+uvcvideo              114688  0
+snd_sof_ipc_msg_injector    16384  0
+snd_sof_ipc_flood_test    16384  0
+cdc_ether              20480  1 r8153_ecm
+usbnet                 53248  2 r8153_ecm,cdc_ether
+uvc                    12288  1 uvcvideo
+ecdh_generic           16384  1 bluetooth
+crct10dif_ce           12288  1
+ecc                    36864  1 ecdh_generic
+cfg80211              999424  4 mt76,mac80211,mt7921_common,mt76_connac_lib
+videobuf2_vmalloc      16384  1 uvcvideo
+r8152                 110592  1 r8153_ecm
+spi_nor               135168  0
+snd_soc_rt5682s        90112  0
+snd_soc_max98390       28672  0
+snd_sof_mt8195         24576  0
+mtk_adsp_common        12288  1 snd_sof_mt8195
+cros_ec_lid_angle      12288  0
+cros_ec_sensors        12288  0
+snd_sof_xtensa_dsp     12288  1 snd_sof_mt8195
+mtd                    90112  2 spi_nor
+rfkill                 45056  6 bluetooth,cfg80211
+cros_ec_sensors_core    20480  2 cros_ec_sensors,cros_ec_lid_angle
+snd_sof_of             12288  1 snd_sof_mt8195
+snd_soc_mt8195_afe    294912  38
+snd_sof               225280  5 snd_sof_ipc_flood_test,snd_sof_ipc_msg_injector,mtk_adsp_common,snd_sof_of,snd_sof_mt8195
+cros_usbpd_logger      16384  0
+snd_soc_mtk_common     40960  1 snd_soc_mt8195_afe
+snd_sof_utils          16384  1 snd_sof
+snd_soc_dmic           12288  0
+fuse                  155648  5
+ip_tables              32768  3 iptable_filter,iptable_nat,iptable_mangle
+ipv6                  602112  78
