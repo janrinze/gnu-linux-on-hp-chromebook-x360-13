@@ -1,0 +1,29 @@
+diff --git a/sound/soc/sof/mediatek/mt8195/mt8195.c b/sound/soc/sof/mediatek/mt8195/mt8195.c
+index 8ee7ee246..d88b79873 100644
+--- a/sound/soc/sof/mediatek/mt8195/mt8195.c
++++ b/sound/soc/sof/mediatek/mt8195/mt8195.c
+@@ -572,8 +572,8 @@ static struct snd_sof_dsp_ops sof_mt8195_ops = {
+ 
+ static struct snd_sof_of_mach sof_mt8195_machs[] = {
+        {
+-               .compatible = "google,tomato",
+-               .sof_tplg_filename = "sof-mt8195-mt6359-rt1019-rt5682-dts.tplg"
++               .compatible = "google,dojo",
++               .sof_tplg_filename = "sof-mt8195-mt6359-max98390-rt5682.tplg"
+        }, {
+                .compatible = "mediatek,mt8195",
+                .sof_tplg_filename = "sof-mt8195.tplg"
+@@ -587,10 +587,10 @@ static const struct sof_dev_desc sof_of_mt8195_desc = {
+        .ipc_supported_mask     = BIT(SOF_IPC_TYPE_3),
+        .ipc_default            = SOF_IPC_TYPE_3,
+        .default_fw_path = {
+-               [SOF_IPC_TYPE_3] = "mediatek/sof",
++               [SOF_IPC_TYPE_3] = "mediatek/sof/dojo",
+        },
+        .default_tplg_path = {
+-               [SOF_IPC_TYPE_3] = "mediatek/sof-tplg",
++               [SOF_IPC_TYPE_3] = "mediatek/sof-tplg/dojo",
+        },
+        .default_fw_filename = {
+                [SOF_IPC_TYPE_3] = "sof-mt8195.ri",
+
