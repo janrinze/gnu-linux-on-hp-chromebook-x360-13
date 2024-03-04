@@ -1,0 +1,94 @@
+diff --git a/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts b/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
+index 16a1fc05b..76477e9fc 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
++++ b/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
+@@ -8,7 +8,7 @@
+ / {
+ 	model = "HP Dojo (sku 1, 3, 5, 7) board";
+ 	chassis-type = "convertible";
+-	compatible = "google,dojo-sku7", "google,dojo-sku5",
++	compatible = "google,dojo-rev0", "google,dojo-sku7", "google,dojo-sku5",
+ 		     "google,dojo-sku3", "google,dojo-sku1",
+ 		     "google,dojo", "mediatek,mt8195";
+ };
+@@ -17,19 +17,22 @@ &audio_codec {
+ 	compatible = "realtek,rt5682s";
+ 	realtek,amic-delay-ms = <250>;
+ };
+-
+ &i2c2 {
+-	spk_r_amp: amplifier@38 {
++        spk_r_amp: amplifier@38 {
+ 		compatible = "maxim,max98390";
+ 		reg = <0x38>;
+-		reset-gpios = <&pio 100 GPIO_ACTIVE_HIGH>;
++		reset-gpios = <&pio 100 GPIO_ACTIVE_LOW>;
+ 		#sound-dai-cells = <0>;
++		maxim,dsm_param_name = "dsm_param_R_Google_Dojo.bin";
++		status = "okay";
+ 	};
+ 
+-	spk_l_amp: amplifier@39 {
++	 spk_l_amp: amplifier@39 {
+ 		compatible = "maxim,max98390";
+ 		reg = <0x39>;
+ 		#sound-dai-cells = <0>;
++		maxim,dsm_param_name = "dsm_param_L_Google_Dojo.bin";
++		status = "okay";
+ 	};
+ };
+ 
+@@ -87,21 +90,37 @@ codec {
+ };
+ 
+ &keyboard_controller {
+-	linux,keymap = <
+-		CROS_STD_MAIN_KEYMAP
++        function-row-physmap = <
++                MATRIX_KEY(0x00, 0x02, 0)       /* T1 */
++                MATRIX_KEY(0x03, 0x02, 0)       /* T2 */
++                MATRIX_KEY(0x02, 0x02, 0)       /* T3 */
++                MATRIX_KEY(0x01, 0x02, 0)       /* T4 */
++                MATRIX_KEY(0x03, 0x04, 0)       /* T5 */
++                MATRIX_KEY(0x02, 0x04, 0)       /* T6 */
++                MATRIX_KEY(0x01, 0x04, 0)       /* T7 */
++                MATRIX_KEY(0x02, 0x09, 0)       /* T8 */
++                MATRIX_KEY(0x01, 0x09, 0)       /* T9 */
++                MATRIX_KEY(0x00, 0x04, 0)       /* T10 */
++                MATRIX_KEY(0x00, 0x01, 0)       /* T11 */
++                MATRIX_KEY(0x01, 0x05, 0)       /* T12 */
++                MATRIX_KEY(0x03, 0x05, 0)       /* T13 */
++        >;
++        linux,keymap = <
++                CROS_STD_MAIN_KEYMAP
+ 
+-		MATRIX_KEY(0x00, 0x02, KEY_BACK)
+-		MATRIX_KEY(0x03, 0x02, KEY_REFRESH)
+-		MATRIX_KEY(0x02, 0x02, KEY_ZOOM)
+-		MATRIX_KEY(0x01, 0x02, KEY_SCALE)
+-		MATRIX_KEY(0x03, 0x04, KEY_SYSRQ)
+-		MATRIX_KEY(0x02, 0x04, KEY_BRIGHTNESSDOWN)
+-		MATRIX_KEY(0x01, 0x04, KEY_BRIGHTNESSUP)
+-		MATRIX_KEY(0x02, 0x09, KEY_KBDILLUMTOGGLE)
+-		MATRIX_KEY(0x01, 0x09, KEY_PLAYPAUSE)
+-		MATRIX_KEY(0x00, 0x04, KEY_MICMUTE)
+-		MATRIX_KEY(0x00, 0x01, KEY_MUTE)
+-		MATRIX_KEY(0x01, 0x05, KEY_VOLUMEDOWN)
+-		MATRIX_KEY(0x03, 0x05, KEY_VOLUMEUP)
+-	>;
++                MATRIX_KEY(0x00, 0x02, KEY_F1)
++                MATRIX_KEY(0x03, 0x02, KEY_F2)
++                MATRIX_KEY(0x02, 0x02, KEY_F3)
++                MATRIX_KEY(0x01, 0x02, KEY_F4)
++                MATRIX_KEY(0x03, 0x04, KEY_F5)
++                MATRIX_KEY(0x02, 0x04, KEY_F6)
++                MATRIX_KEY(0x01, 0x04, KEY_F7)
++                MATRIX_KEY(0x02, 0x09, KEY_F8)
++                MATRIX_KEY(0x01, 0x09, KEY_F9)
++                MATRIX_KEY(0x00, 0x04, KEY_F10)
++                MATRIX_KEY(0x00, 0x01, KEY_F11)
++                MATRIX_KEY(0x01, 0x05, KEY_F12)
++                MATRIX_KEY(0x03, 0x05, KEY_BREAK)
++        >;
+ };
++
