@@ -1,5 +1,5 @@
 diff --git a/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts b/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
-index 16a1fc05b..76477e9fc 100644
+index 16a1fc05b..a97454281 100644
 --- a/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
 +++ b/arch/arm64/boot/dts/mediatek/mt8195-cherry-dojo-r1.dts
 @@ -8,7 +8,7 @@
@@ -11,7 +11,7 @@ index 16a1fc05b..76477e9fc 100644
  		     "google,dojo-sku3", "google,dojo-sku1",
  		     "google,dojo", "mediatek,mt8195";
  };
-@@ -17,19 +17,22 @@ &audio_codec {
+@@ -17,22 +17,30 @@ &audio_codec {
  	compatible = "realtek,rt5682s";
  	realtek,amic-delay-ms = <250>;
  };
@@ -38,7 +38,15 @@ index 16a1fc05b..76477e9fc 100644
  	};
  };
  
-@@ -87,21 +90,37 @@ codec {
++&spk_amplifier {
++    /* Disable RT1019P, not present on Dojo */
++    status = "disabled";
++};
++
+ &i2c4 {
+ 	touchscreen@15 {
+ 		compatible = "hid-over-i2c";
+@@ -87,21 +95,39 @@ codec {
  };
  
  &keyboard_controller {
@@ -58,6 +66,7 @@ index 16a1fc05b..76477e9fc 100644
 +                MATRIX_KEY(0x00, 0x01, 0)       /* T11 */
 +                MATRIX_KEY(0x01, 0x05, 0)       /* T12 */
 +                MATRIX_KEY(0x03, 0x05, 0)       /* T13 */
++                MATRIX_KEY(0x03, 0x09, 0)       /* LOCK key */
 +        >;
 +        linux,keymap = <
 +                CROS_STD_MAIN_KEYMAP
@@ -89,6 +98,7 @@ index 16a1fc05b..76477e9fc 100644
 +                MATRIX_KEY(0x00, 0x01, KEY_F11)
 +                MATRIX_KEY(0x01, 0x05, KEY_F12)
 +                MATRIX_KEY(0x03, 0x05, KEY_BREAK)
++		MATRIX_KEY(0x03, 0x09, KEY_DELETE)
 +        >;
  };
 +
